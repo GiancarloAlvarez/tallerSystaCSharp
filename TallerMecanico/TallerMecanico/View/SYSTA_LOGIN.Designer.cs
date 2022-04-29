@@ -72,14 +72,13 @@
             // 
             // iconButton1
             // 
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
             this.iconButton1.IconColor = System.Drawing.Color.Black;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.Location = new System.Drawing.Point(254, 348);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(124, 68);
             this.iconButton1.TabIndex = 4;
-            this.iconButton1.Text = "iconButton1";
             this.iconButton1.UseVisualStyleBackColor = true;
             // 
             // SYSTA_LOGIN
