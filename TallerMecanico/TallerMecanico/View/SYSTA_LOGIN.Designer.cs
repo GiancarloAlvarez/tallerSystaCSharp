@@ -78,7 +78,7 @@
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.FileImport;
             this.iconButton1.IconColor = System.Drawing.Color.Black;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(276, 286);
+            this.iconButton1.Location = new System.Drawing.Point(264, 286);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(102, 68);
             this.iconButton1.TabIndex = 4;
@@ -89,7 +89,7 @@
             this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
             this.iconButton2.IconColor = System.Drawing.Color.Black;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.Location = new System.Drawing.Point(145, 286);
+            this.iconButton2.Location = new System.Drawing.Point(155, 286);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(103, 68);
             this.iconButton2.TabIndex = 5;
@@ -100,7 +100,7 @@
             this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Edit;
             this.iconButton3.IconColor = System.Drawing.Color.Black;
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.Location = new System.Drawing.Point(202, 360);
+            this.iconButton3.Location = new System.Drawing.Point(218, 360);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Size = new System.Drawing.Size(103, 68);
             this.iconButton3.TabIndex = 5;
