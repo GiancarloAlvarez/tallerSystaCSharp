@@ -1,0 +1,14 @@
+C:\Users\GGJEANZS\Desktop\Proyectos\tallerSystaCSharp\TallerMecanico\TallerMecanico\bin\Debug\TallerMecanico.exe.config
+C:\Users\GGJEANZS\Desktop\Proyectos\tallerSystaCSharp\TallerMecanico\TallerMecanico\bin\Debug\TallerMecanico.exe
+C:\Users\GGJEANZS\Desktop\Proyectos\tallerSystaCSharp\TallerMecanico\TallerMecanico\bin\Debug\TallerMecanico.pdb
+C:\Users\GGJEANZS\Desktop\Proyectos\tallerSystaCSharp\TallerMecanico\TallerMecanico\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\GGJEANZS\Desktop\Proyectos\tallerSystaCSharp\TallerMecanico\TallerMecanico\obj\Debug\TallerMecanico.csproj.AssemblyReference.cache
+C:\Users\GGJEANZS\Desktop\Proyectos\tallerSystaCSharp\TallerMecanico\TallerMecanico\obj\Debug\TallerMecanico.Form1.resources
+C:\Users\GGJEANZS\Desktop\Proyectos\tallerSystaCSharp\TallerMecanico\TallerMecanico\obj\Debug\TallerMecanico.Properties.Resources.resources
+C:\Users\GGJEANZS\Desktop\Proyectos\tallerSystaCSharp\TallerMecanico\TallerMecanico\obj\Debug\TallerMecanico.View.SYSTA_LOGIN.resources
+C:\Users\GGJEANZS\Desktop\Proyectos\tallerSystaCSharp\TallerMecanico\TallerMecanico\obj\Debug\TallerMecanico.View.SYSTA_MENU.resources
+C:\Users\GGJEANZS\Desktop\Proyectos\tallerSystaCSharp\TallerMecanico\TallerMecanico\obj\Debug\TallerMecanico.csproj.GenerateResource.cache
+C:\Users\GGJEANZS\Desktop\Proyectos\tallerSystaCSharp\TallerMecanico\TallerMecanico\obj\Debug\TallerMecanico.csproj.CoreCompileInputs.cache
+C:\Users\GGJEANZS\Desktop\Proyectos\tallerSystaCSharp\TallerMecanico\TallerMecanico\obj\Debug\TallerMecanico.csproj.CopyComplete
+C:\Users\GGJEANZS\Desktop\Proyectos\tallerSystaCSharp\TallerMecanico\TallerMecanico\obj\Debug\TallerMecanico.exe
+C:\Users\GGJEANZS\Desktop\Proyectos\tallerSystaCSharp\TallerMecanico\TallerMecanico\obj\Debug\TallerMecanico.pdb
