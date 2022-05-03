@@ -52,9 +52,10 @@ namespace TallerMecanico2.Controller
             }
 
 
-           
+
         }
-        public void update(Model.SYSTAS_CLIENTES Cliente) {
+        public void update(Model.SYSTAS_CLIENTES Cliente)
+        {
 
             try
             {
@@ -68,7 +69,64 @@ namespace TallerMecanico2.Controller
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-               
+
+            }
+
+        }
+
+        public void Delete(int sID)
+        {
+
+            try
+            {
+                using (db = new Model.Systa_taller1Entities())
+                {
+                    db.SYSTAS_CLIENTES.Remove(db.SYSTAS_CLIENTES.Single(s => s.ID_Cliente == sID));
+                    db.SaveChanges();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+
+
+        }
+
+        public List<Model.SYSTAS_CLIENTES> Search(int sID)
+        {
+            try
+            {
+                using (db = new Model.Systa_taller1Entities())
+                {
+
+                    return db.SYSTAS_CLIENTES.Where(s => s.ID_Cliente == sID).ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+
+        }
+
+        public List<Model.SYSTAS_CLIENTES> SearchName(String sName)
+        {
+            try
+            {
+                using (db = new Model.Systa_taller1Entities())
+                {
+
+                    return db.SYSTAS_CLIENTES.Where(s => s.Nombre_Cliente.Contains(sName)).ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
             }
 
         }
