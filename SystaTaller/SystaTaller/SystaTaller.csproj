@@ -59,15 +59,47 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Model1.Context.cs">
+    <Compile Include="Models\ModelTaller.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
+      <DependentUpon>ModelTaller.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Model1.Designer.cs">
+    <Compile Include="Models\ModelTaller.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <DependentUpon>ModelTaller.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelTaller.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelTaller.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SYSTAS_CLIENTES.cs">
+      <DependentUpon>ModelTaller.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SYSTAS_DETALLE_REPARACION.cs">
+      <DependentUpon>ModelTaller.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SYSTAS_FACTURA.cs">
+      <DependentUpon>ModelTaller.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SYSTAS_INVENTARIO_REPUESTO.cs">
+      <DependentUpon>ModelTaller.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SYSTAS_MECANICO.cs">
+      <DependentUpon>ModelTaller.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SYSTAS_SERVICIO.cs">
+      <DependentUpon>ModelTaller.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SYSTAS_TALLER.cs">
+      <DependentUpon>ModelTaller.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SYSTAS_USUARIO.cs">
+      <DependentUpon>ModelTaller.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SYSTAS_VEHICULO.cs">
+      <DependentUpon>ModelTaller.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -80,12 +112,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EntityDeploy Include="Models\Model1.edmx">
+    <EntityDeploy Include="Models\ModelTaller.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+      <LastGenOutput>ModelTaller.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Models\Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
+    <None Include="Models\ModelTaller.edmx.diagram">
+      <DependentUpon>ModelTaller.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -102,17 +134,23 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Models\Model1.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Contollers\" />
     <Folder Include="Views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Models\ModelTaller.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelTaller.edmx</DependentUpon>
+      <LastGenOutput>ModelTaller.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\ModelTaller.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelTaller.edmx</DependentUpon>
+      <LastGenOutput>ModelTaller.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

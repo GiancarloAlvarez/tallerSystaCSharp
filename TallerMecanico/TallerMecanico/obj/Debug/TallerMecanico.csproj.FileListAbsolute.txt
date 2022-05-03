@@ -12,3 +12,17 @@ C:\Users\GGJEANZS\Desktop\Proyectos\tallerSystaCSharp\TallerMecanico\TallerMecan
 C:\Users\GGJEANZS\Desktop\Proyectos\tallerSystaCSharp\TallerMecanico\TallerMecanico\obj\Debug\TallerMecanico.csproj.CopyComplete
 C:\Users\GGJEANZS\Desktop\Proyectos\tallerSystaCSharp\TallerMecanico\TallerMecanico\obj\Debug\TallerMecanico.exe
 C:\Users\GGJEANZS\Desktop\Proyectos\tallerSystaCSharp\TallerMecanico\TallerMecanico\obj\Debug\TallerMecanico.pdb
+C:\Users\INFOTEP\Documents\GiancarloCSharpProyectos\tallerSystaCSharp\TallerMecanico\TallerMecanico\bin\Debug\TallerMecanico.exe.config
+C:\Users\INFOTEP\Documents\GiancarloCSharpProyectos\tallerSystaCSharp\TallerMecanico\TallerMecanico\bin\Debug\TallerMecanico.exe
+C:\Users\INFOTEP\Documents\GiancarloCSharpProyectos\tallerSystaCSharp\TallerMecanico\TallerMecanico\bin\Debug\TallerMecanico.pdb
+C:\Users\INFOTEP\Documents\GiancarloCSharpProyectos\tallerSystaCSharp\TallerMecanico\TallerMecanico\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\INFOTEP\Documents\GiancarloCSharpProyectos\tallerSystaCSharp\TallerMecanico\TallerMecanico\obj\Debug\TallerMecanico.csproj.AssemblyReference.cache
+C:\Users\INFOTEP\Documents\GiancarloCSharpProyectos\tallerSystaCSharp\TallerMecanico\TallerMecanico\obj\Debug\TallerMecanico.Form1.resources
+C:\Users\INFOTEP\Documents\GiancarloCSharpProyectos\tallerSystaCSharp\TallerMecanico\TallerMecanico\obj\Debug\TallerMecanico.Properties.Resources.resources
+C:\Users\INFOTEP\Documents\GiancarloCSharpProyectos\tallerSystaCSharp\TallerMecanico\TallerMecanico\obj\Debug\TallerMecanico.View.SYSTA_LOGIN.resources
+C:\Users\INFOTEP\Documents\GiancarloCSharpProyectos\tallerSystaCSharp\TallerMecanico\TallerMecanico\obj\Debug\TallerMecanico.View.SYSTA_MENU.resources
+C:\Users\INFOTEP\Documents\GiancarloCSharpProyectos\tallerSystaCSharp\TallerMecanico\TallerMecanico\obj\Debug\TallerMecanico.csproj.GenerateResource.cache
+C:\Users\INFOTEP\Documents\GiancarloCSharpProyectos\tallerSystaCSharp\TallerMecanico\TallerMecanico\obj\Debug\TallerMecanico.csproj.CoreCompileInputs.cache
+C:\Users\INFOTEP\Documents\GiancarloCSharpProyectos\tallerSystaCSharp\TallerMecanico\TallerMecanico\obj\Debug\TallerMecanico.csproj.CopyComplete
+C:\Users\INFOTEP\Documents\GiancarloCSharpProyectos\tallerSystaCSharp\TallerMecanico\TallerMecanico\obj\Debug\TallerMecanico.exe
+C:\Users\INFOTEP\Documents\GiancarloCSharpProyectos\tallerSystaCSharp\TallerMecanico\TallerMecanico\obj\Debug\TallerMecanico.pdb
