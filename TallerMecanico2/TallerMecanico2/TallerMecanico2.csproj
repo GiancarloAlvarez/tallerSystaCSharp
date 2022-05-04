@@ -63,6 +63,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\CDatosCliente.cs" />
+    <Compile Include="Controller\CDatosPiezas.cs" />
+    <Compile Include="Controller\CDatosVehiculo.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,11 +130,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\Admin_RClienteVehiculo.cs">
+    <Compile Include="View\AdminClienteVehiculo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Admin_RClienteVehiculo.Designer.cs">
-      <DependentUpon>Admin_RClienteVehiculo.cs</DependentUpon>
+    <Compile Include="View\AdminClienteVehiculo.Designer.cs">
+      <DependentUpon>AdminClienteVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdminRPiezas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdminRPiezas.Designer.cs">
+      <DependentUpon>AdminRPiezas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\RDetalleReparacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\RDetalleReparacion.Designer.cs">
+      <DependentUpon>RDetalleReparacion.cs</DependentUpon>
     </Compile>
     <Compile Include="View\registerCliente.cs">
       <SubType>Form</SubType>
@@ -155,6 +169,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\AdminClienteVehiculo.resx">
+      <DependentUpon>AdminClienteVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AdminRPiezas.resx">
+      <DependentUpon>AdminRPiezas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\RDetalleReparacion.resx">
+      <DependentUpon>RDetalleReparacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\registerCliente.resx">
       <DependentUpon>registerCliente.cs</DependentUpon>
     </EmbeddedResource>

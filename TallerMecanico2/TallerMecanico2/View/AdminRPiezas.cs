@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TallerMecanico2.View
 {
-    public partial class Admin_RClienteVehiculo : Form
+    public partial class AdminRPiezas : Form
     {
-        public Admin_RClienteVehiculo()
+        public AdminRPiezas()
         {
             InitializeComponent();
         }
