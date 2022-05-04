@@ -97,6 +97,11 @@ namespace TallerMecanico2.Controller
 
         }
 
+        internal static void Insert()
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Model.SYSTAS_CLIENTES> Search(int sID)
         {
             try

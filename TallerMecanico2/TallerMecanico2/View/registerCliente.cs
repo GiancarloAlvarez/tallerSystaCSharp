@@ -24,9 +24,40 @@ namespace TallerMecanico2.View
             InitializeComponent();
         }
 
-        public void CargarGrid() {
-            
         
+
+        public void CargarDatosClient()
+        {
+            clientes.ID_Cliente = ID;
+            clientes.Nombre_Cliente = txtClienteN.Text;
+            clientes.Apellido_Cliente = txtClienteA.Text;
+            clientes.cedula=txtClienteC.Text;
+            clientes.Direccion = txtClienteD.Text;
+            clientes.telefono_Cliente = int.Parse(mtxtClienteT.Text);
+            
+
+
+        }
+
+        public void CargarDatosVehiculo() {
+         clientesVehiculo.ID_Vehiculo= ID;
+         clientesVehiculo.Marca= txtVehiculoM.Text;
+         clientesVehiculo.Modelo= txtModelo.Text;
+         clientesVehiculo.Matricula=txtVehiculoMa.Text;
+         clientesVehiculo.Color=txtVehiculoC.Text;
+        
+        }
+
+        private void btnClienteG_Click(object sender, EventArgs e)
+        {
+            CargarDatosClient();
+            cliente.Insert(clientes);
+        }
+
+        private void btnVehiculoG_Click(object sender, EventArgs e)
+        {
+            CargarDatosVehiculo();
+            clienteVehiculo.Insert(clientesVehiculo);
         }
     }
 }

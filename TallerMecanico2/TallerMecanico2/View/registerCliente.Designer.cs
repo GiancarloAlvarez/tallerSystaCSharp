@@ -47,7 +47,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtVehiculoMa = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtMarca = new System.Windows.Forms.TextBox();
+            this.txtModelo = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtVehiculoM = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -96,11 +96,12 @@
             this.btnClienteG.TabIndex = 3;
             this.btnClienteG.Text = "Guardar";
             this.btnClienteG.UseVisualStyleBackColor = true;
+            this.btnClienteG.Click += new System.EventHandler(this.btnClienteG_Click);
             // 
             // mtxtClienteT
             // 
             this.mtxtClienteT.Location = new System.Drawing.Point(13, 369);
-            this.mtxtClienteT.Mask = "000-000-0000";
+            this.mtxtClienteT.Mask = "(999)000-0000";
             this.mtxtClienteT.Name = "mtxtClienteT";
             this.mtxtClienteT.Size = new System.Drawing.Size(318, 31);
             this.mtxtClienteT.TabIndex = 2;
@@ -180,7 +181,7 @@
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.txtVehiculoMa);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.txtMarca);
+            this.groupBox2.Controls.Add(this.txtModelo);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.txtVehiculoM);
             this.groupBox2.Controls.Add(this.label10);
@@ -202,6 +203,7 @@
             this.btnVehiculoG.TabIndex = 3;
             this.btnVehiculoG.Text = "Guardar";
             this.btnVehiculoG.UseVisualStyleBackColor = true;
+            this.btnVehiculoG.Click += new System.EventHandler(this.btnVehiculoG_Click);
             // 
             // txtVehiculoC
             // 
@@ -237,12 +239,12 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Matricula";
             // 
-            // txtMarca
+            // txtModelo
             // 
-            this.txtMarca.Location = new System.Drawing.Point(13, 150);
-            this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(318, 31);
-            this.txtMarca.TabIndex = 1;
+            this.txtModelo.Location = new System.Drawing.Point(13, 150);
+            this.txtModelo.Name = "txtModelo";
+            this.txtModelo.Size = new System.Drawing.Size(318, 31);
+            this.txtModelo.TabIndex = 1;
             // 
             // label9
             // 
@@ -311,7 +313,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtVehiculoMa;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtMarca;
+        private System.Windows.Forms.TextBox txtModelo;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtVehiculoM;
         private System.Windows.Forms.Label label10;

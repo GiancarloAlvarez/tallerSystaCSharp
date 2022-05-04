@@ -18,6 +18,8 @@ namespace TallerMecanico2.View
         CDatosVehiculo clienteVehiculo = new CDatosVehiculo();
         SYSTAS_CLIENTES clientes = new SYSTAS_CLIENTES();
         SYSTAS_VEHICULO clientesVehiculo = new SYSTAS_VEHICULO();
+        public int idCliente;
+        public int idClienteVehiculo;
         public AdminClienteVehiculo()
         {
             InitializeComponent();
@@ -36,6 +38,13 @@ namespace TallerMecanico2.View
 
         }
 
+        public void CargarDatosClient() {
+            clientes.ID_Cliente = idCliente;
+            clientes.Nombre_Cliente = 
+        
+        
+        }
+
         private void dgCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -45,6 +54,7 @@ namespace TallerMecanico2.View
         {
             CargarGridClient();
             CargarGridVehiculo();
+
         }
     }
 }
