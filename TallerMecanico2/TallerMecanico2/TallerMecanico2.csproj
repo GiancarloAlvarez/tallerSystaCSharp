@@ -63,7 +63,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\CDatosCliente.cs" />
+    <Compile Include="Controller\CDatosDetalleReparacion.cs" />
+    <Compile Include="Controller\CDatosFactura.cs" />
+    <Compile Include="Controller\CDatosMecanico.cs" />
     <Compile Include="Controller\CDatosPiezas.cs" />
+    <Compile Include="Controller\CDatosServicio.cs" />
+    <Compile Include="Controller\CDatosTaller.cs" />
+    <Compile Include="Controller\CDatosUsuario.cs" />
     <Compile Include="Controller\CDatosVehiculo.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
