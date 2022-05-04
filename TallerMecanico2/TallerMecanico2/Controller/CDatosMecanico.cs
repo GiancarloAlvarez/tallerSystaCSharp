@@ -82,7 +82,7 @@ namespace TallerMecanico2.Controller
             {
                 using (db = new Model.Systa_taller1Entities())
                 {
-                    db.SYSTAS_CLIENTES.Remove(db.SYSTAS_CLIENTES.Single(s => s.ID_Cliente == sID));
+                    db.SYSTAS_MECANICO.Remove(db.SYSTAS_MECANICO.Single(s => s.ID_Mecanico == sID));
                     db.SaveChanges();
 
                 }
@@ -96,14 +96,14 @@ namespace TallerMecanico2.Controller
 
         }
 
-        public List<Model.SYSTAS_CLIENTES> Search(int sID)
+        public List<Model.SYSTAS_MECANICO> Search(int sID)
         {
             try
             {
                 using (db = new Model.Systa_taller1Entities())
                 {
 
-                    return db.SYSTAS_CLIENTES.Where(s => s.ID_Cliente == sID).ToList();
+                    return db.SYSTAS_MECANICO.Where(s => s.ID_Mecanico == sID).ToList();
                 }
             }
             catch (Exception ex)
@@ -114,14 +114,14 @@ namespace TallerMecanico2.Controller
 
         }
 
-        public List<Model.SYSTAS_CLIENTES> SearchName(String sName)
+        public List<Model.SYSTAS_MECANICO> SearchName(String sName)
         {
             try
             {
                 using (db = new Model.Systa_taller1Entities())
                 {
 
-                    return db.SYSTAS_CLIENTES.Where(s => s.Nombre_Cliente.Contains(sName)).ToList();
+                    return db.SYSTAS_MECANICO.Where(s => s.nombre_mecanico.Contains(sName)).ToList();
                 }
             }
             catch (Exception ex)
