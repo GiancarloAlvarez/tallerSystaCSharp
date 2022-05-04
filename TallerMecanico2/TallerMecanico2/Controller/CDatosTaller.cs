@@ -8,17 +8,17 @@ using System.Windows.Forms;
 
 namespace TallerMecanico2.Controller
 {
-    internal class CDatosPiezas
+    internal class CDatosTaller
     {
-        Model.Systa_taller1Entities db;
 
-        public void Insert(Model.SYSTAS_INVENTARIO_REPUESTO Piezas)
+        Model.Systa_taller1Entities db;
+        public void Insert(Model.SYSTAS_TALLER Taller)
         {
             using (db = new Model.Systa_taller1Entities())
             {
                 try
                 {
-                    db.SYSTAS_INVENTARIO_REPUESTO.Add(Piezas);
+                    db.SYSTAS_TALLER.Add(Taller);
                     db.SaveChanges();
                 }
                 catch (Exception ex)
@@ -30,10 +30,10 @@ namespace TallerMecanico2.Controller
 
             }
 
-
         }
 
-        public List<Model.SYSTAS_INVENTARIO_REPUESTO> Read()
+
+        public List<Model.SYSTAS_TALLER> Read()
         {
 
             try
@@ -41,7 +41,7 @@ namespace TallerMecanico2.Controller
                 using (db = new Model.Systa_taller1Entities())
                 {
 
-                    return db.SYSTAS_INVENTARIO_REPUESTO.ToList();
+                    return db.SYSTAS_TALLER.ToList();
                 }
             }
             catch (Exception ex)
@@ -54,7 +54,7 @@ namespace TallerMecanico2.Controller
 
         }
 
-        public void update(Model.SYSTAS_INVENTARIO_REPUESTO Piezas)
+        public void update(Model.SYSTAS_TALLER Taller)
         {
 
             try
@@ -62,7 +62,7 @@ namespace TallerMecanico2.Controller
                 using (db = new Model.Systa_taller1Entities())
                 {
 
-                    db.Entry(Piezas).State = EntityState.Modified;
+                    db.Entry(Taller).State = EntityState.Modified;
                     db.SaveChanges();
                 }
             }
@@ -73,6 +73,7 @@ namespace TallerMecanico2.Controller
             }
 
         }
+
 
         public void Delete(int sID)
         {
@@ -81,7 +82,7 @@ namespace TallerMecanico2.Controller
             {
                 using (db = new Model.Systa_taller1Entities())
                 {
-                    db.SYSTAS_INVENTARIO_REPUESTO.Remove(db.SYSTAS_INVENTARIO_REPUESTO.Single(s => s.ID_inventario == sID));
+                    db.SYSTAS_TALLER.Remove(db.SYSTAS_TALLER.Single(s => s.ID_taller == sID));
                     db.SaveChanges();
 
                 }
@@ -95,14 +96,14 @@ namespace TallerMecanico2.Controller
 
         }
 
-        public List<Model.SYSTAS_INVENTARIO_REPUESTO> Search(int sID)
+        public List<Model.SYSTAS_TALLER> Search(int sID)
         {
             try
             {
                 using (db = new Model.Systa_taller1Entities())
                 {
 
-                    return db.SYSTAS_INVENTARIO_REPUESTO.Where(s => s.ID_inventario == sID).ToList();
+                    return db.SYSTAS_TALLER.Where(s => s.ID_taller == sID).ToList();
                 }
             }
             catch (Exception ex)
@@ -113,14 +114,14 @@ namespace TallerMecanico2.Controller
 
         }
 
-        public List<Model.SYSTAS_INVENTARIO_REPUESTO> SearchName(String sName)
+        public List<Model.SYSTAS_TALLER> SearchName(String sName)
         {
             try
             {
                 using (db = new Model.Systa_taller1Entities())
                 {
 
-                    return db.SYSTAS_INVENTARIO_REPUESTO.Where(s => s.nombre_pieza.Contains(sName)).ToList();
+                    return db.SYSTAS_TALLER.Where(s => s.Nombre_taller.Contains(sName)).ToList();
                 }
             }
             catch (Exception ex)
