@@ -23,8 +23,6 @@
         <AssociationConnector Association="Systa_taller1Model.FK_mecanico_id1" ManuallyRouted="false" />
         <AssociationConnector Association="Systa_taller1Model.FK_Servicio_id1" ManuallyRouted="false" />
         <AssociationConnector Association="Systa_taller1Model.FK_Usuario_id" ManuallyRouted="false" />
-        <AssociationConnector Association="Systa_taller1Model.SYSTAS_TALLERSYSTAS_FACTURA" />
-        <AssociationConnector Association="Systa_taller1Model.SYSTAS_CLIENTESSYSTAS_FACTURA" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

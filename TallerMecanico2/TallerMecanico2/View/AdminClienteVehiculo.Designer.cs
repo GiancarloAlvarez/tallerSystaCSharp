@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -38,8 +37,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -50,24 +49,25 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgCliente = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgVehiculo = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.iconButton6 = new FontAwesome.Sharp.IconButton();
+            this.iconButton5 = new FontAwesome.Sharp.IconButton();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgCliente)).BeginInit();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgVehiculo)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.SuspendLayout();
@@ -88,18 +88,6 @@
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Vehiculo";
-            // 
-            // iconButton2
-            // 
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton2.IconColor = System.Drawing.Color.Black;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.Location = new System.Drawing.Point(39, 37);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(119, 50);
-            this.iconButton2.TabIndex = 3;
-            this.iconButton2.Text = "Guardar";
-            this.iconButton2.UseVisualStyleBackColor = true;
             // 
             // textBox5
             // 
@@ -169,6 +157,18 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "Marca";
             // 
+            // iconButton2
+            // 
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton2.IconColor = System.Drawing.Color.Black;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.Location = new System.Drawing.Point(39, 37);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(119, 50);
+            this.iconButton2.TabIndex = 3;
+            this.iconButton2.Text = "Guardar";
+            this.iconButton2.UseVisualStyleBackColor = true;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.maskedTextBox1);
@@ -187,18 +187,6 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cliente";
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(164, 37);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(119, 50);
-            this.iconButton1.TabIndex = 3;
-            this.iconButton1.Text = "Guardar";
-            this.iconButton1.UseVisualStyleBackColor = true;
             // 
             // maskedTextBox1
             // 
@@ -286,43 +274,56 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre";
             // 
+            // iconButton1
+            // 
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.Location = new System.Drawing.Point(164, 37);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(119, 50);
+            this.iconButton1.TabIndex = 3;
+            this.iconButton1.Text = "Guardar";
+            this.iconButton1.UseVisualStyleBackColor = true;
+            // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.dataGridView1);
+            this.groupBox3.Controls.Add(this.dgCliente);
             this.groupBox3.Location = new System.Drawing.Point(703, 111);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(752, 288);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
+            this.groupBox3.Text = "Cliente";
             // 
-            // dataGridView1
+            // dgCliente
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 16);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(746, 269);
-            this.dataGridView1.TabIndex = 0;
+            this.dgCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgCliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgCliente.Location = new System.Drawing.Point(3, 16);
+            this.dgCliente.Name = "dgCliente";
+            this.dgCliente.Size = new System.Drawing.Size(746, 269);
+            this.dgCliente.TabIndex = 0;
+            this.dgCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCliente_CellContentClick);
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.dataGridView2);
+            this.groupBox4.Controls.Add(this.dgVehiculo);
             this.groupBox4.Location = new System.Drawing.Point(703, 411);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(752, 288);
             this.groupBox4.TabIndex = 5;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "groupBox3";
+            this.groupBox4.Text = "Vehiculo";
             // 
-            // dataGridView2
+            // dgVehiculo
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 16);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(746, 269);
-            this.dataGridView2.TabIndex = 0;
+            this.dgVehiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgVehiculo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgVehiculo.Location = new System.Drawing.Point(3, 16);
+            this.dgVehiculo.Name = "dgVehiculo";
+            this.dgVehiculo.Size = new System.Drawing.Size(746, 269);
+            this.dgVehiculo.TabIndex = 0;
             // 
             // groupBox5
             // 
@@ -337,18 +338,6 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "groupBox5";
             // 
-            // iconButton3
-            // 
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton3.IconColor = System.Drawing.Color.Black;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.Location = new System.Drawing.Point(298, 37);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(119, 50);
-            this.iconButton3.TabIndex = 3;
-            this.iconButton3.Text = "Guardar";
-            this.iconButton3.UseVisualStyleBackColor = true;
-            // 
             // iconButton4
             // 
             this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.None;
@@ -360,6 +349,18 @@
             this.iconButton4.TabIndex = 3;
             this.iconButton4.Text = "Guardar";
             this.iconButton4.UseVisualStyleBackColor = true;
+            // 
+            // iconButton3
+            // 
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton3.IconColor = System.Drawing.Color.Black;
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.Location = new System.Drawing.Point(298, 37);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Size = new System.Drawing.Size(119, 50);
+            this.iconButton3.TabIndex = 3;
+            this.iconButton3.Text = "Guardar";
+            this.iconButton3.UseVisualStyleBackColor = true;
             // 
             // groupBox7
             // 
@@ -373,21 +374,17 @@
             this.groupBox7.TabIndex = 6;
             this.groupBox7.TabStop = false;
             // 
-            // textBox9
+            // iconButton6
             // 
-            this.textBox9.Location = new System.Drawing.Point(284, 30);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(150, 34);
-            this.textBox9.TabIndex = 4;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(6, 30);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(182, 34);
-            this.textBox10.TabIndex = 4;
+            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.iconButton6.IconColor = System.Drawing.Color.Black;
+            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.iconButton6.IconSize = 24;
+            this.iconButton6.Location = new System.Drawing.Point(431, 30);
+            this.iconButton6.Name = "iconButton6";
+            this.iconButton6.Size = new System.Drawing.Size(68, 34);
+            this.iconButton6.TabIndex = 5;
+            this.iconButton6.UseVisualStyleBackColor = true;
             // 
             // iconButton5
             // 
@@ -401,17 +398,21 @@
             this.iconButton5.TabIndex = 5;
             this.iconButton5.UseVisualStyleBackColor = true;
             // 
-            // iconButton6
+            // textBox10
             // 
-            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.iconButton6.IconColor = System.Drawing.Color.Black;
-            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconButton6.IconSize = 24;
-            this.iconButton6.Location = new System.Drawing.Point(431, 30);
-            this.iconButton6.Name = "iconButton6";
-            this.iconButton6.Size = new System.Drawing.Size(68, 34);
-            this.iconButton6.TabIndex = 5;
-            this.iconButton6.UseVisualStyleBackColor = true;
+            this.textBox10.Location = new System.Drawing.Point(6, 30);
+            this.textBox10.Multiline = true;
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(182, 34);
+            this.textBox10.TabIndex = 4;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(284, 30);
+            this.textBox9.Multiline = true;
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(150, 34);
+            this.textBox9.TabIndex = 4;
             // 
             // AdminClienteVehiculo
             // 
@@ -426,14 +427,15 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "AdminClienteVehiculo";
             this.Text = "AdminClienteVehiculo";
+            this.Load += new System.EventHandler(this.AdminClienteVehiculo_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgCliente)).EndInit();
             this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgVehiculo)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
@@ -466,9 +468,9 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgCliente;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgVehiculo;
         private System.Windows.Forms.GroupBox groupBox5;
         private FontAwesome.Sharp.IconButton iconButton4;
         private FontAwesome.Sharp.IconButton iconButton3;

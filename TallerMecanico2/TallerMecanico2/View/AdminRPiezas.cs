@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TallerMecanico2.Model;
+using TallerMecanico2.Controller;
 
 namespace TallerMecanico2.View
 {
     public partial class AdminRPiezas : Form
-    {
+    {   
+        
         public AdminRPiezas()
         {
             InitializeComponent();
         }
+        
     }
 }

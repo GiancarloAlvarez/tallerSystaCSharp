@@ -31,25 +31,25 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(registerCliente));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.btnClienteG = new FontAwesome.Sharp.IconButton();
+            this.mtxtClienteT = new System.Windows.Forms.MaskedTextBox();
+            this.txtClienteD = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtClienteC = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtClienteA = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtClienteN = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.btnVehiculoG = new FontAwesome.Sharp.IconButton();
+            this.txtVehiculoC = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtVehiculoMa = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtMarca = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtVehiculoM = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -67,16 +67,16 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.iconButton1);
-            this.groupBox1.Controls.Add(this.maskedTextBox1);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.btnClienteG);
+            this.groupBox1.Controls.Add(this.mtxtClienteT);
+            this.groupBox1.Controls.Add(this.txtClienteD);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txtClienteC);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtClienteA);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtClienteN);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 41);
             this.groupBox1.Name = "groupBox1";
@@ -85,32 +85,32 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cliente";
             // 
-            // iconButton1
+            // btnClienteG
             // 
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(97, 439);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(119, 50);
-            this.iconButton1.TabIndex = 3;
-            this.iconButton1.Text = "Guardar";
-            this.iconButton1.UseVisualStyleBackColor = true;
+            this.btnClienteG.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnClienteG.IconColor = System.Drawing.Color.Black;
+            this.btnClienteG.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnClienteG.Location = new System.Drawing.Point(97, 439);
+            this.btnClienteG.Name = "btnClienteG";
+            this.btnClienteG.Size = new System.Drawing.Size(119, 50);
+            this.btnClienteG.TabIndex = 3;
+            this.btnClienteG.Text = "Guardar";
+            this.btnClienteG.UseVisualStyleBackColor = true;
             // 
-            // maskedTextBox1
+            // mtxtClienteT
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(13, 369);
-            this.maskedTextBox1.Mask = "000-000-0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(318, 31);
-            this.maskedTextBox1.TabIndex = 2;
+            this.mtxtClienteT.Location = new System.Drawing.Point(13, 369);
+            this.mtxtClienteT.Mask = "000-000-0000";
+            this.mtxtClienteT.Name = "mtxtClienteT";
+            this.mtxtClienteT.Size = new System.Drawing.Size(318, 31);
+            this.mtxtClienteT.TabIndex = 2;
             // 
-            // textBox4
+            // txtClienteD
             // 
-            this.textBox4.Location = new System.Drawing.Point(13, 285);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(318, 31);
-            this.textBox4.TabIndex = 1;
+            this.txtClienteD.Location = new System.Drawing.Point(13, 285);
+            this.txtClienteD.Name = "txtClienteD";
+            this.txtClienteD.Size = new System.Drawing.Size(318, 31);
+            this.txtClienteD.TabIndex = 1;
             // 
             // label5
             // 
@@ -132,12 +132,12 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Direccion";
             // 
-            // textBox3
+            // txtClienteC
             // 
-            this.textBox3.Location = new System.Drawing.Point(13, 221);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(318, 31);
-            this.textBox3.TabIndex = 1;
+            this.txtClienteC.Location = new System.Drawing.Point(13, 221);
+            this.txtClienteC.Name = "txtClienteC";
+            this.txtClienteC.Size = new System.Drawing.Size(318, 31);
+            this.txtClienteC.TabIndex = 1;
             // 
             // label3
             // 
@@ -149,12 +149,12 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Cedula";
             // 
-            // textBox2
+            // txtClienteA
             // 
-            this.textBox2.Location = new System.Drawing.Point(13, 150);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(318, 31);
-            this.textBox2.TabIndex = 1;
+            this.txtClienteA.Location = new System.Drawing.Point(13, 150);
+            this.txtClienteA.Name = "txtClienteA";
+            this.txtClienteA.Size = new System.Drawing.Size(318, 31);
+            this.txtClienteA.TabIndex = 1;
             // 
             // label2
             // 
@@ -166,23 +166,23 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Apellido";
             // 
-            // textBox1
+            // txtClienteN
             // 
-            this.textBox1.Location = new System.Drawing.Point(13, 83);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(318, 31);
-            this.textBox1.TabIndex = 1;
+            this.txtClienteN.Location = new System.Drawing.Point(13, 83);
+            this.txtClienteN.Name = "txtClienteN";
+            this.txtClienteN.Size = new System.Drawing.Size(318, 31);
+            this.txtClienteN.TabIndex = 1;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.iconButton2);
-            this.groupBox2.Controls.Add(this.textBox5);
+            this.groupBox2.Controls.Add(this.btnVehiculoG);
+            this.groupBox2.Controls.Add(this.txtVehiculoC);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.textBox6);
+            this.groupBox2.Controls.Add(this.txtVehiculoMa);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.textBox7);
+            this.groupBox2.Controls.Add(this.txtMarca);
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.textBox8);
+            this.groupBox2.Controls.Add(this.txtVehiculoM);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Location = new System.Drawing.Point(391, 41);
             this.groupBox2.Name = "groupBox2";
@@ -191,24 +191,24 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Vehiculo";
             // 
-            // iconButton2
+            // btnVehiculoG
             // 
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton2.IconColor = System.Drawing.Color.Black;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.Location = new System.Drawing.Point(97, 439);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(119, 50);
-            this.iconButton2.TabIndex = 3;
-            this.iconButton2.Text = "Guardar";
-            this.iconButton2.UseVisualStyleBackColor = true;
+            this.btnVehiculoG.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnVehiculoG.IconColor = System.Drawing.Color.Black;
+            this.btnVehiculoG.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnVehiculoG.Location = new System.Drawing.Point(97, 439);
+            this.btnVehiculoG.Name = "btnVehiculoG";
+            this.btnVehiculoG.Size = new System.Drawing.Size(119, 50);
+            this.btnVehiculoG.TabIndex = 3;
+            this.btnVehiculoG.Text = "Guardar";
+            this.btnVehiculoG.UseVisualStyleBackColor = true;
             // 
-            // textBox5
+            // txtVehiculoC
             // 
-            this.textBox5.Location = new System.Drawing.Point(13, 285);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(318, 31);
-            this.textBox5.TabIndex = 1;
+            this.txtVehiculoC.Location = new System.Drawing.Point(13, 285);
+            this.txtVehiculoC.Name = "txtVehiculoC";
+            this.txtVehiculoC.Size = new System.Drawing.Size(318, 31);
+            this.txtVehiculoC.TabIndex = 1;
             // 
             // label7
             // 
@@ -216,16 +216,16 @@
             this.label7.Location = new System.Drawing.Point(9, 258);
             this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(118, 24);
+            this.label7.Size = new System.Drawing.Size(70, 24);
             this.label7.TabIndex = 0;
-            this.label7.Text = "Matricula";
+            this.label7.Text = "Color";
             // 
-            // textBox6
+            // txtVehiculoMa
             // 
-            this.textBox6.Location = new System.Drawing.Point(13, 221);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(318, 31);
-            this.textBox6.TabIndex = 1;
+            this.txtVehiculoMa.Location = new System.Drawing.Point(13, 221);
+            this.txtVehiculoMa.Name = "txtVehiculoMa";
+            this.txtVehiculoMa.Size = new System.Drawing.Size(318, 31);
+            this.txtVehiculoMa.TabIndex = 1;
             // 
             // label8
             // 
@@ -235,14 +235,14 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(118, 24);
             this.label8.TabIndex = 0;
-            this.label8.Text = "Mstricula";
+            this.label8.Text = "Matricula";
             // 
-            // textBox7
+            // txtMarca
             // 
-            this.textBox7.Location = new System.Drawing.Point(13, 150);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(318, 31);
-            this.textBox7.TabIndex = 1;
+            this.txtMarca.Location = new System.Drawing.Point(13, 150);
+            this.txtMarca.Name = "txtMarca";
+            this.txtMarca.Size = new System.Drawing.Size(318, 31);
+            this.txtMarca.TabIndex = 1;
             // 
             // label9
             // 
@@ -254,12 +254,12 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "Modelo";
             // 
-            // textBox8
+            // txtVehiculoM
             // 
-            this.textBox8.Location = new System.Drawing.Point(13, 83);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(318, 31);
-            this.textBox8.TabIndex = 1;
+            this.txtVehiculoM.Location = new System.Drawing.Point(13, 83);
+            this.txtVehiculoM.Name = "txtVehiculoM";
+            this.txtVehiculoM.Size = new System.Drawing.Size(318, 31);
+            this.txtVehiculoM.TabIndex = 1;
             // 
             // label10
             // 
@@ -275,7 +275,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 656);
+            this.ClientSize = new System.Drawing.Size(811, 656);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("MS Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -295,25 +295,25 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.TextBox textBox4;
+        private FontAwesome.Sharp.IconButton btnClienteG;
+        private System.Windows.Forms.MaskedTextBox mtxtClienteT;
+        private System.Windows.Forms.TextBox txtClienteD;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtClienteC;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtClienteA;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtClienteN;
         private System.Windows.Forms.GroupBox groupBox2;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private System.Windows.Forms.TextBox textBox5;
+        private FontAwesome.Sharp.IconButton btnVehiculoG;
+        private System.Windows.Forms.TextBox txtVehiculoC;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtVehiculoMa;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtVehiculoM;
         private System.Windows.Forms.Label label10;
     }
 }

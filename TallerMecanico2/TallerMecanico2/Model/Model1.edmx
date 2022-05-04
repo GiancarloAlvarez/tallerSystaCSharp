@@ -289,7 +289,6 @@
           <Property Name="telefono_Cliente" Type="Int32" />
           <Property Name="Vehiculo_id1" Type="Int32" Nullable="false" />
           <NavigationProperty Name="SYSTAS_VEHICULO" Relationship="Self.FK_Cliente_id" FromRole="SYSTAS_CLIENTES" ToRole="SYSTAS_VEHICULO" />
-          <NavigationProperty Name="SYSTAS_FACTURA" Relationship="Systa_taller1Model.SYSTAS_CLIENTESSYSTAS_FACTURA" FromRole="SYSTAS_CLIENTES" ToRole="SYSTAS_FACTURA" />
         </EntityType>
         <EntityType Name="SYSTAS_DETALLE_REPARACION">
           <Key>
@@ -331,8 +330,6 @@
           <NavigationProperty Name="SYSTAS_MECANICO" Relationship="Self.FK_clientes_id1" FromRole="SYSTAS_FACTURA" ToRole="SYSTAS_MECANICO" />
           <NavigationProperty Name="SYSTAS_MECANICO1" Relationship="Self.FK_mecanico_id1" FromRole="SYSTAS_FACTURA" ToRole="SYSTAS_MECANICO" />
           <NavigationProperty Name="SYSTAS_SERVICIO" Relationship="Self.FK_Servicio_id1" FromRole="SYSTAS_FACTURA" ToRole="SYSTAS_SERVICIO" />
-          <NavigationProperty Name="SYSTAS_TALLER" Relationship="Systa_taller1Model.SYSTAS_TALLERSYSTAS_FACTURA" FromRole="SYSTAS_FACTURA" ToRole="SYSTAS_TALLER" />
-          <NavigationProperty Name="SYSTAS_CLIENTES" Relationship="Systa_taller1Model.SYSTAS_CLIENTESSYSTAS_FACTURA" FromRole="SYSTAS_FACTURA" ToRole="SYSTAS_CLIENTES" />
         </EntityType>
         <EntityType Name="SYSTAS_INVENTARIO_REPUESTO">
           <Key>
@@ -383,7 +380,6 @@
           <Property Name="Nombre_taller" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="Telefono" Type="Int32" />
           <Property Name="correo" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="SYSTAS_FACTURA" Relationship="Systa_taller1Model.SYSTAS_TALLERSYSTAS_FACTURA" FromRole="SYSTAS_TALLER" ToRole="SYSTAS_FACTURA" />
         </EntityType>
         <EntityType Name="SYSTAS_USUARIO">
           <Key>
@@ -565,23 +561,7 @@
             <End Role="SYSTAS_USUARIO" EntitySet="SYSTAS_USUARIO" />
             <End Role="SYSTAS_MECANICO" EntitySet="SYSTAS_MECANICO" />
           </AssociationSet>
-          <AssociationSet Name="SYSTAS_TALLERSYSTAS_FACTURA" Association="Systa_taller1Model.SYSTAS_TALLERSYSTAS_FACTURA">
-            <End Role="SYSTAS_TALLER" EntitySet="SYSTAS_TALLER" />
-            <End Role="SYSTAS_FACTURA" EntitySet="SYSTAS_FACTURA" />
-          </AssociationSet>
-          <AssociationSet Name="SYSTAS_CLIENTESSYSTAS_FACTURA" Association="Systa_taller1Model.SYSTAS_CLIENTESSYSTAS_FACTURA">
-            <End Role="SYSTAS_CLIENTES" EntitySet="SYSTAS_CLIENTES" />
-            <End Role="SYSTAS_FACTURA" EntitySet="SYSTAS_FACTURA" />
-          </AssociationSet>
         </EntityContainer>
-        <Association Name="SYSTAS_TALLERSYSTAS_FACTURA">
-          <End Type="Systa_taller1Model.SYSTAS_TALLER" Role="SYSTAS_TALLER" Multiplicity="1" />
-          <End Type="Systa_taller1Model.SYSTAS_FACTURA" Role="SYSTAS_FACTURA" Multiplicity="*" />
-        </Association>
-        <Association Name="SYSTAS_CLIENTESSYSTAS_FACTURA">
-          <End Type="Systa_taller1Model.SYSTAS_CLIENTES" Role="SYSTAS_CLIENTES" Multiplicity="1" />
-          <End Type="Systa_taller1Model.SYSTAS_FACTURA" Role="SYSTAS_FACTURA" Multiplicity="*" />
-        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->

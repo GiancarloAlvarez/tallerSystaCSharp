@@ -28,9 +28,9 @@ namespace TallerMecanico2.Model
         public int clientes_id1 { get; set; }
         public int detalle_id { get; set; }
     
-        public virtual SYSTAS_CLIENTES SYSTAS_CLIENTES { get; set; }
         public virtual SYSTAS_DETALLE_REPARACION SYSTAS_DETALLE_REPARACION { get; set; }
         public virtual SYSTAS_MECANICO SYSTAS_MECANICO { get; set; }
+        public virtual SYSTAS_MECANICO SYSTAS_MECANICO1 { get; set; }
         public virtual SYSTAS_SERVICIO SYSTAS_SERVICIO { get; set; }
     }
 }
