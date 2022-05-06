@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b684bca86c63440ba9df1eada6468c72" Name="Diagram1">
+        <EntityTypeShape EntityType="Systa_taller2Model1.SYSTAS_CLIENTES" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Systa_taller2Model1.SYSTAS_DETALLE_REPARACION" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Systa_taller2Model1.SYSTAS_FACTURA" Width="1.5" PointX="5.25" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Systa_taller2Model1.SYSTAS_INVENTARIO_REPUESTO" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Systa_taller2Model1.SYSTAS_MECANICO" Width="1.5" PointX="0.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Systa_taller2Model1.SYSTAS_SERVICIO" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Systa_taller2Model1.SYSTAS_TALLER" Width="1.5" PointX="3" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Systa_taller2Model1.SYSTAS_USUARIO" Width="1.5" PointX="1.5" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Systa_taller2Model1.SYSTAS_VEHICULO" Width="1.5" PointX="3" PointY="9.5" IsExpanded="true" />
+        <AssociationConnector Association="Systa_taller2Model1.FK__SYSTAS_DE__clien__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="Systa_taller2Model1.FK__SYSTAS_FA__Clien__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="Systa_taller2Model1.FK__SYSTAS_VE__Clien__267ABA7A" ManuallyRouted="false" />
+        <AssociationConnector Association="Systa_taller2Model1.FK__SYSTAS_DE__Inven__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="Systa_taller2Model1.FK__SYSTAS_DE__mecan__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="Systa_taller2Model1.FK__SYSTAS_FA__detal__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="Systa_taller2Model1.FK__SYSTAS_FA__mecan__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="Systa_taller2Model1.FK__SYSTAS_FA__servi__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="Systa_taller2Model1.FK__SYSTAS_FA__talle__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="Systa_taller2Model1.FK__SYSTAS_ME__Usuar__300424B4" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

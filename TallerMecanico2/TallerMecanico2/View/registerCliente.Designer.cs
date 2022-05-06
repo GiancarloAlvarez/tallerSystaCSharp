@@ -32,7 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnClienteG = new FontAwesome.Sharp.IconButton();
-            this.mtxtClienteT = new System.Windows.Forms.MaskedTextBox();
             this.txtClienteD = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -51,6 +50,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtVehiculoM = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -68,7 +68,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnClienteG);
-            this.groupBox1.Controls.Add(this.mtxtClienteT);
+            this.groupBox1.Controls.Add(this.txtTelefono);
             this.groupBox1.Controls.Add(this.txtClienteD);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
@@ -97,14 +97,6 @@
             this.btnClienteG.Text = "Guardar";
             this.btnClienteG.UseVisualStyleBackColor = true;
             this.btnClienteG.Click += new System.EventHandler(this.btnClienteG_Click);
-            // 
-            // mtxtClienteT
-            // 
-            this.mtxtClienteT.Location = new System.Drawing.Point(13, 369);
-            this.mtxtClienteT.Mask = "(999)000-0000";
-            this.mtxtClienteT.Name = "mtxtClienteT";
-            this.mtxtClienteT.Size = new System.Drawing.Size(318, 31);
-            this.mtxtClienteT.TabIndex = 2;
             // 
             // txtClienteD
             // 
@@ -273,6 +265,13 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "Marca";
             // 
+            // txtTelefono
+            // 
+            this.txtTelefono.Location = new System.Drawing.Point(13, 369);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(318, 31);
+            this.txtTelefono.TabIndex = 1;
+            // 
             // registerCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
@@ -298,7 +297,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private FontAwesome.Sharp.IconButton btnClienteG;
-        private System.Windows.Forms.MaskedTextBox mtxtClienteT;
         private System.Windows.Forms.TextBox txtClienteD;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -317,5 +315,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtVehiculoM;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtTelefono;
     }
 }

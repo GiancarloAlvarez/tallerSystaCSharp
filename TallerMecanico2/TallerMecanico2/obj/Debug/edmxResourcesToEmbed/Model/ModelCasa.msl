@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Systa_taller1Model3StoreContainer" CdmEntityContainer="Systa_taller1Entities2">
+    <EntitySetMapping Name="SYSTAS_CLIENTES">
+      <EntityTypeMapping TypeName="Systa_taller1Model3.SYSTAS_CLIENTES">
+        <MappingFragment StoreEntitySet="SYSTAS_CLIENTES">
+          <ScalarProperty Name="ID_Cliente" ColumnName="ID_Cliente" />
+          <ScalarProperty Name="Nombre_Cliente" ColumnName="Nombre_Cliente" />
+          <ScalarProperty Name="Apellido_Cliente" ColumnName="Apellido_Cliente" />
+          <ScalarProperty Name="cedula" ColumnName="cedula" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="telefono_Cliente" ColumnName="telefono_Cliente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SYSTAS_DETALLE_REPARACION">
+      <EntityTypeMapping TypeName="Systa_taller1Model3.SYSTAS_DETALLE_REPARACION">
+        <MappingFragment StoreEntitySet="SYSTAS_DETALLE_REPARACION">
+          <ScalarProperty Name="ID_Detalle" ColumnName="ID_Detalle" />
+          <ScalarProperty Name="Estado_Vehiculo" ColumnName="Estado_Vehiculo" />
+          <ScalarProperty Name="Piezas_usadas" ColumnName="Piezas_usadas" />
+          <ScalarProperty Name="mecanico_asignado" ColumnName="mecanico_asignado" />
+          <ScalarProperty Name="mano_obra" ColumnName="mano_obra" />
+          <ScalarProperty Name="precio_piezas" ColumnName="precio_piezas" />
+          <ScalarProperty Name="fecha_registro" ColumnName="fecha_registro" />
+          <ScalarProperty Name="mecanico_id" ColumnName="mecanico_id" />
+          <ScalarProperty Name="clientes_id" ColumnName="clientes_id" />
+          <ScalarProperty Name="Inventario_id" ColumnName="Inventario_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SYSTAS_FACTURA">
+      <EntityTypeMapping TypeName="Systa_taller1Model3.SYSTAS_FACTURA">
+        <MappingFragment StoreEntitySet="SYSTAS_FACTURA">
+          <ScalarProperty Name="ID_Factura" ColumnName="ID_Factura" />
+          <ScalarProperty Name="Fecha_Factura" ColumnName="Fecha_Factura" />
+          <ScalarProperty Name="Cliente_id" ColumnName="Cliente_id" />
+          <ScalarProperty Name="mecanico_id" ColumnName="mecanico_id" />
+          <ScalarProperty Name="servicio_id" ColumnName="servicio_id" />
+          <ScalarProperty Name="repuestos_usados" ColumnName="repuestos_usados" />
+          <ScalarProperty Name="costo_servicio" ColumnName="costo_servicio" />
+          <ScalarProperty Name="subtotal_piezas" ColumnName="subtotal_piezas" />
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="Servicio_id1" ColumnName="Servicio_id1" />
+          <ScalarProperty Name="mecanico_id1" ColumnName="mecanico_id1" />
+          <ScalarProperty Name="clientes_id1" ColumnName="clientes_id1" />
+          <ScalarProperty Name="detalle_id" ColumnName="detalle_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SYSTAS_INVENTARIO_REPUESTO">
+      <EntityTypeMapping TypeName="Systa_taller1Model3.SYSTAS_INVENTARIO_REPUESTO">
+        <MappingFragment StoreEntitySet="SYSTAS_INVENTARIO_REPUESTO">
+          <ScalarProperty Name="ID_inventario" ColumnName="ID_inventario" />
+          <ScalarProperty Name="nombre_pieza" ColumnName="nombre_pieza" />
+          <ScalarProperty Name="cantidad_pieza" ColumnName="cantidad_pieza" />
+          <ScalarProperty Name="cantidad_disp" ColumnName="cantidad_disp" />
+          <ScalarProperty Name="precio_pieza" ColumnName="precio_pieza" />
+          <ScalarProperty Name="pieza_nueva" ColumnName="pieza_nueva" />
+          <ScalarProperty Name="pieza_usada" ColumnName="pieza_usada" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SYSTAS_MECANICO">
+      <EntityTypeMapping TypeName="Systa_taller1Model3.SYSTAS_MECANICO">
+        <MappingFragment StoreEntitySet="SYSTAS_MECANICO">
+          <ScalarProperty Name="ID_Mecanico" ColumnName="ID_Mecanico" />
+          <ScalarProperty Name="nombre_mecanico" ColumnName="nombre_mecanico" />
+          <ScalarProperty Name="apellido_mecanico" ColumnName="apellido_mecanico" />
+          <ScalarProperty Name="cedula_mecanico" ColumnName="cedula_mecanico" />
+          <ScalarProperty Name="fecha_nac" ColumnName="fecha_nac" />
+          <ScalarProperty Name="Disponible" ColumnName="Disponible" />
+          <ScalarProperty Name="Usuario_id" ColumnName="Usuario_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SYSTAS_SERVICIO">
+      <EntityTypeMapping TypeName="Systa_taller1Model3.SYSTAS_SERVICIO">
+        <MappingFragment StoreEntitySet="SYSTAS_SERVICIO">
+          <ScalarProperty Name="id_servicio" ColumnName="id_servicio" />
+          <ScalarProperty Name="nombre_servicio" ColumnName="nombre_servicio" />
+          <ScalarProperty Name="tipo_servicio" ColumnName="tipo_servicio" />
+          <ScalarProperty Name="costo" ColumnName="costo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SYSTAS_TALLER">
+      <EntityTypeMapping TypeName="Systa_taller1Model3.SYSTAS_TALLER">
+        <MappingFragment StoreEntitySet="SYSTAS_TALLER">
+          <ScalarProperty Name="ID_taller" ColumnName="ID_taller" />
+          <ScalarProperty Name="RNC" ColumnName="RNC" />
+          <ScalarProperty Name="Nombre_taller" ColumnName="Nombre_taller" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SYSTAS_USUARIO">
+      <EntityTypeMapping TypeName="Systa_taller1Model3.SYSTAS_USUARIO">
+        <MappingFragment StoreEntitySet="SYSTAS_USUARIO">
+          <ScalarProperty Name="ID_Usuario" ColumnName="ID_Usuario" />
+          <ScalarProperty Name="nombre_usuario" ColumnName="nombre_usuario" />
+          <ScalarProperty Name="apellido_usuario" ColumnName="apellido_usuario" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Clave" ColumnName="Clave" />
+          <ScalarProperty Name="EsAdmin" ColumnName="EsAdmin" />
+          <ScalarProperty Name="EsMecanic" ColumnName="EsMecanic" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SYSTAS_VEHICULO">
+      <EntityTypeMapping TypeName="Systa_taller1Model3.SYSTAS_VEHICULO">
+        <MappingFragment StoreEntitySet="SYSTAS_VEHICULO">
+          <ScalarProperty Name="ID_Vehiculo" ColumnName="ID_Vehiculo" />
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+          <ScalarProperty Name="Marca" ColumnName="Marca" />
+          <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Cliente_id" ColumnName="Cliente_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -23,7 +23,6 @@ namespace TallerMecanico2.Model
         public int ID_inventario { get; set; }
         public string nombre_pieza { get; set; }
         public Nullable<int> cantidad_pieza { get; set; }
-        public Nullable<int> cantidad_disp { get; set; }
         public Nullable<double> precio_pieza { get; set; }
         public Nullable<bool> pieza_nueva { get; set; }
         public Nullable<bool> pieza_usada { get; set; }

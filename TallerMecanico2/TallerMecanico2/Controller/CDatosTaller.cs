@@ -5,16 +5,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using TallerMecanico2.Model;
 namespace TallerMecanico2.Controller
 {
+    //Entity INFOTEP: Systa_taller1Entities
+    //Entity Casa: Systa_taller1Entities2
+
     internal class CDatosTaller
     {
 
-        Model.Systa_taller1Entities db;
+        Model.Systa_taller2Entities1 db;
         public void Insert(Model.SYSTAS_TALLER Taller)
         {
-            using (db = new Model.Systa_taller1Entities())
+            using (db = new Model.Systa_taller2Entities1())
             {
                 try
                 {
@@ -38,7 +41,7 @@ namespace TallerMecanico2.Controller
 
             try
             {
-                using (db = new Model.Systa_taller1Entities())
+                using (db = new Model.Systa_taller2Entities1())
                 {
 
                     return db.SYSTAS_TALLER.ToList();
@@ -59,7 +62,7 @@ namespace TallerMecanico2.Controller
 
             try
             {
-                using (db = new Model.Systa_taller1Entities())
+                using (db = new Model.Systa_taller2Entities1())
                 {
 
                     db.Entry(Taller).State = EntityState.Modified;
@@ -80,7 +83,7 @@ namespace TallerMecanico2.Controller
 
             try
             {
-                using (db = new Model.Systa_taller1Entities())
+                using (db = new Model.Systa_taller2Entities1())
                 {
                     db.SYSTAS_TALLER.Remove(db.SYSTAS_TALLER.Single(s => s.ID_taller == sID));
                     db.SaveChanges();
@@ -100,7 +103,7 @@ namespace TallerMecanico2.Controller
         {
             try
             {
-                using (db = new Model.Systa_taller1Entities())
+                using (db = new Model.Systa_taller2Entities1())
                 {
 
                     return db.SYSTAS_TALLER.Where(s => s.ID_taller == sID).ToList();
@@ -118,7 +121,7 @@ namespace TallerMecanico2.Controller
         {
             try
             {
-                using (db = new Model.Systa_taller1Entities())
+                using (db = new Model.Systa_taller2Entities1())
                 {
 
                     return db.SYSTAS_TALLER.Where(s => s.Nombre_taller.Contains(sName)).ToList();

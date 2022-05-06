@@ -14,10 +14,19 @@ namespace TallerMecanico2.Model
     
     public partial class SYSTAS_TALLER
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public SYSTAS_TALLER()
+        {
+            this.SYSTAS_FACTURA = new HashSet<SYSTAS_FACTURA>();
+        }
+    
         public int ID_taller { get; set; }
         public Nullable<int> RNC { get; set; }
         public string Nombre_taller { get; set; }
-        public Nullable<int> Telefono { get; set; }
+        public string Telefono { get; set; }
         public string correo { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SYSTAS_FACTURA> SYSTAS_FACTURA { get; set; }
     }
 }

@@ -5,16 +5,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TallerMecanico2.Model;
 
 namespace TallerMecanico2.Controller
 {
+    //Entity INFOTEP: Systa_taller1Entities
+    //Entity Casa: Systa_taller1Entities2
     internal class CDatosFactura
     {
-        Model.Systa_taller1Entities db;
+        Systa_taller2Entities1 db;
 
-        public void Insert(Model.SYSTAS_FACTURA Factura)
+        public void Insert(SYSTAS_FACTURA Factura)
         {
-            using (db = new Model.Systa_taller1Entities())
+            using (db = new Systa_taller2Entities1())
             {
                 try
                 {
@@ -33,12 +36,12 @@ namespace TallerMecanico2.Controller
 
         }
 
-        public List<Model.SYSTAS_FACTURA> Read()
+        public List<SYSTAS_FACTURA> Read()
         {
 
             try
             {
-                using (db = new Model.Systa_taller1Entities())
+                using (db = new Systa_taller2Entities1())
                 {
 
                     return db.SYSTAS_FACTURA.ToList();
@@ -55,12 +58,12 @@ namespace TallerMecanico2.Controller
         }
 
 
-        public void update(Model.SYSTAS_FACTURA Factura)
+        public void update(SYSTAS_FACTURA Factura)
         {
 
             try
             {
-                using (db = new Model.Systa_taller1Entities())
+                using (db = new Systa_taller2Entities1())
                 {
 
                     db.Entry(Factura).State = EntityState.Modified;
@@ -80,7 +83,7 @@ namespace TallerMecanico2.Controller
 
             try
             {
-                using (db = new Model.Systa_taller1Entities())
+                using (db = new Systa_taller2Entities1())
                 {
                     db.SYSTAS_FACTURA.Remove(db.SYSTAS_FACTURA.Single(s => s.ID_Factura == sID));
                     db.SaveChanges();
@@ -96,11 +99,11 @@ namespace TallerMecanico2.Controller
 
         }
 
-        public List<Model.SYSTAS_FACTURA> Search(int sID)
+        public List<SYSTAS_FACTURA> Search(int sID)
         {
             try
             {
-                using (db = new Model.Systa_taller1Entities())
+                using (db = new Systa_taller2Entities1())
                 {
 
                     return db.SYSTAS_FACTURA.Where(s => s.ID_Factura == sID).ToList();

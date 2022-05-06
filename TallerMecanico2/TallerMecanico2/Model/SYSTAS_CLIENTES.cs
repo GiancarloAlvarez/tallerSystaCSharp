@@ -17,6 +17,8 @@ namespace TallerMecanico2.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public SYSTAS_CLIENTES()
         {
+            this.SYSTAS_DETALLE_REPARACION = new HashSet<SYSTAS_DETALLE_REPARACION>();
+            this.SYSTAS_FACTURA = new HashSet<SYSTAS_FACTURA>();
             this.SYSTAS_VEHICULO = new HashSet<SYSTAS_VEHICULO>();
         }
     
@@ -25,9 +27,12 @@ namespace TallerMecanico2.Model
         public string Apellido_Cliente { get; set; }
         public string cedula { get; set; }
         public string Direccion { get; set; }
-        public Nullable<int> telefono_Cliente { get; set; }
-        public int Vehiculo_id1 { get; set; }
+        public string telefono_Cliente { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SYSTAS_DETALLE_REPARACION> SYSTAS_DETALLE_REPARACION { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SYSTAS_FACTURA> SYSTAS_FACTURA { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SYSTAS_VEHICULO> SYSTAS_VEHICULO { get; set; }
     }

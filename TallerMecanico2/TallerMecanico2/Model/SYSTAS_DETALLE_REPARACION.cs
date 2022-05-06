@@ -28,13 +28,13 @@ namespace TallerMecanico2.Model
         public Nullable<double> precio_piezas { get; set; }
         public Nullable<System.DateTime> fecha_registro { get; set; }
         public Nullable<int> mecanico_id { get; set; }
-        public int clientes_id { get; set; }
-        public int Inventario_id { get; set; }
+        public Nullable<int> clientes_id { get; set; }
+        public Nullable<int> Inventario_id { get; set; }
     
+        public virtual SYSTAS_CLIENTES SYSTAS_CLIENTES { get; set; }
+        public virtual SYSTAS_INVENTARIO_REPUESTO SYSTAS_INVENTARIO_REPUESTO { get; set; }
         public virtual SYSTAS_MECANICO SYSTAS_MECANICO { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SYSTAS_FACTURA> SYSTAS_FACTURA { get; set; }
-        public virtual SYSTAS_INVENTARIO_REPUESTO SYSTAS_INVENTARIO_REPUESTO { get; set; }
-        public virtual SYSTAS_MECANICO SYSTAS_MECANICO1 { get; set; }
     }
 }

@@ -1,0 +1,733 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Systa_taller2Model1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="SYSTAS_CLIENTES">
+          <Key>
+            <PropertyRef Name="ID_Cliente" />
+          </Key>
+          <Property Name="ID_Cliente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre_Cliente" Type="varchar" MaxLength="255" />
+          <Property Name="Apellido_Cliente" Type="varchar" MaxLength="255" />
+          <Property Name="cedula" Type="varchar" MaxLength="255" />
+          <Property Name="Direccion" Type="varchar" MaxLength="255" />
+          <Property Name="telefono_Cliente" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="SYSTAS_DETALLE_REPARACION">
+          <Key>
+            <PropertyRef Name="ID_Detalle" />
+          </Key>
+          <Property Name="ID_Detalle" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Estado_Vehiculo" Type="varchar" MaxLength="255" />
+          <Property Name="Piezas_usadas" Type="varchar" MaxLength="255" />
+          <Property Name="mecanico_asignado" Type="varchar" MaxLength="255" />
+          <Property Name="mano_obra" Type="float" />
+          <Property Name="precio_piezas" Type="float" />
+          <Property Name="fecha_registro" Type="date" />
+          <Property Name="mecanico_id" Type="int" />
+          <Property Name="clientes_id" Type="int" />
+          <Property Name="Inventario_id" Type="int" />
+        </EntityType>
+        <EntityType Name="SYSTAS_FACTURA">
+          <Key>
+            <PropertyRef Name="ID_Factura" />
+          </Key>
+          <Property Name="ID_Factura" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Fecha_Factura" Type="date" />
+          <Property Name="Cliente_id" Type="int" />
+          <Property Name="mecanico_id" Type="int" />
+          <Property Name="servicio_id" Type="int" />
+          <Property Name="taller_id" Type="int" />
+          <Property Name="repuestos_usados" Type="varchar" MaxLength="255" />
+          <Property Name="costo_servicio" Type="float" />
+          <Property Name="subtotal_piezas" Type="float" />
+          <Property Name="total" Type="float" />
+          <Property Name="detalle_id" Type="int" />
+        </EntityType>
+        <EntityType Name="SYSTAS_INVENTARIO_REPUESTO">
+          <Key>
+            <PropertyRef Name="ID_inventario" />
+          </Key>
+          <Property Name="ID_inventario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre_pieza" Type="varchar" MaxLength="255" />
+          <Property Name="cantidad_pieza" Type="int" />
+          <Property Name="precio_pieza" Type="float" />
+          <Property Name="pieza_nueva" Type="bit" />
+          <Property Name="pieza_usada" Type="bit" />
+        </EntityType>
+        <EntityType Name="SYSTAS_MECANICO">
+          <Key>
+            <PropertyRef Name="ID_Mecanico" />
+          </Key>
+          <Property Name="ID_Mecanico" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre_mecanico" Type="varchar" MaxLength="255" />
+          <Property Name="apellido_mecanico" Type="varchar" MaxLength="255" />
+          <Property Name="cedula_mecanico" Type="varchar" MaxLength="255" />
+          <Property Name="fecha_nac" Type="varchar" MaxLength="255" />
+          <Property Name="Disponible" Type="bit" />
+          <Property Name="Usuario_id" Type="int" />
+        </EntityType>
+        <EntityType Name="SYSTAS_SERVICIO">
+          <Key>
+            <PropertyRef Name="id_servicio" />
+          </Key>
+          <Property Name="id_servicio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre_servicio" Type="varchar" MaxLength="255" />
+          <Property Name="tipo_servicio" Type="varchar" MaxLength="255" />
+          <Property Name="costo" Type="float" />
+        </EntityType>
+        <EntityType Name="SYSTAS_TALLER">
+          <Key>
+            <PropertyRef Name="ID_taller" />
+          </Key>
+          <Property Name="ID_taller" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RNC" Type="int" />
+          <Property Name="Nombre_taller" Type="varchar" MaxLength="255" />
+          <Property Name="Telefono" Type="varchar" MaxLength="255" />
+          <Property Name="correo" Type="varchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="SYSTAS_USUARIO">
+          <Key>
+            <PropertyRef Name="ID_Usuario" />
+          </Key>
+          <Property Name="ID_Usuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre_usuario" Type="varchar" MaxLength="255" />
+          <Property Name="apellido_usuario" Type="varchar" MaxLength="255" />
+          <Property Name="Usuario" Type="varchar" MaxLength="255" />
+          <Property Name="Clave" Type="varchar" MaxLength="255" />
+          <Property Name="EsAdmin" Type="bit" />
+          <Property Name="EsMecanic" Type="bit" />
+        </EntityType>
+        <EntityType Name="SYSTAS_VEHICULO">
+          <Key>
+            <PropertyRef Name="ID_Vehiculo" />
+          </Key>
+          <Property Name="ID_Vehiculo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Matricula" Type="varchar" MaxLength="25" />
+          <Property Name="Marca" Type="varchar" MaxLength="150" />
+          <Property Name="Modelo" Type="varchar" MaxLength="150" />
+          <Property Name="Color" Type="varchar" MaxLength="155" />
+          <Property Name="Cliente_id" Type="int" />
+        </EntityType>
+        <Association Name="FK__SYSTAS_DE__clien__398D8EEE">
+          <End Role="SYSTAS_CLIENTES" Type="Self.SYSTAS_CLIENTES" Multiplicity="0..1" />
+          <End Role="SYSTAS_DETALLE_REPARACION" Type="Self.SYSTAS_DETALLE_REPARACION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYSTAS_CLIENTES">
+              <PropertyRef Name="ID_Cliente" />
+            </Principal>
+            <Dependent Role="SYSTAS_DETALLE_REPARACION">
+              <PropertyRef Name="clientes_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SYSTAS_DE__Inven__3A81B327">
+          <End Role="SYSTAS_INVENTARIO_REPUESTO" Type="Self.SYSTAS_INVENTARIO_REPUESTO" Multiplicity="0..1" />
+          <End Role="SYSTAS_DETALLE_REPARACION" Type="Self.SYSTAS_DETALLE_REPARACION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYSTAS_INVENTARIO_REPUESTO">
+              <PropertyRef Name="ID_inventario" />
+            </Principal>
+            <Dependent Role="SYSTAS_DETALLE_REPARACION">
+              <PropertyRef Name="Inventario_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SYSTAS_DE__mecan__38996AB5">
+          <End Role="SYSTAS_MECANICO" Type="Self.SYSTAS_MECANICO" Multiplicity="0..1" />
+          <End Role="SYSTAS_DETALLE_REPARACION" Type="Self.SYSTAS_DETALLE_REPARACION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYSTAS_MECANICO">
+              <PropertyRef Name="ID_Mecanico" />
+            </Principal>
+            <Dependent Role="SYSTAS_DETALLE_REPARACION">
+              <PropertyRef Name="mecanico_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SYSTAS_FA__Clien__3D5E1FD2">
+          <End Role="SYSTAS_CLIENTES" Type="Self.SYSTAS_CLIENTES" Multiplicity="0..1" />
+          <End Role="SYSTAS_FACTURA" Type="Self.SYSTAS_FACTURA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYSTAS_CLIENTES">
+              <PropertyRef Name="ID_Cliente" />
+            </Principal>
+            <Dependent Role="SYSTAS_FACTURA">
+              <PropertyRef Name="Cliente_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SYSTAS_FA__detal__412EB0B6">
+          <End Role="SYSTAS_DETALLE_REPARACION" Type="Self.SYSTAS_DETALLE_REPARACION" Multiplicity="0..1" />
+          <End Role="SYSTAS_FACTURA" Type="Self.SYSTAS_FACTURA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYSTAS_DETALLE_REPARACION">
+              <PropertyRef Name="ID_Detalle" />
+            </Principal>
+            <Dependent Role="SYSTAS_FACTURA">
+              <PropertyRef Name="detalle_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SYSTAS_FA__mecan__3E52440B">
+          <End Role="SYSTAS_MECANICO" Type="Self.SYSTAS_MECANICO" Multiplicity="0..1" />
+          <End Role="SYSTAS_FACTURA" Type="Self.SYSTAS_FACTURA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYSTAS_MECANICO">
+              <PropertyRef Name="ID_Mecanico" />
+            </Principal>
+            <Dependent Role="SYSTAS_FACTURA">
+              <PropertyRef Name="mecanico_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SYSTAS_FA__servi__3F466844">
+          <End Role="SYSTAS_SERVICIO" Type="Self.SYSTAS_SERVICIO" Multiplicity="0..1" />
+          <End Role="SYSTAS_FACTURA" Type="Self.SYSTAS_FACTURA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYSTAS_SERVICIO">
+              <PropertyRef Name="id_servicio" />
+            </Principal>
+            <Dependent Role="SYSTAS_FACTURA">
+              <PropertyRef Name="servicio_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SYSTAS_FA__talle__403A8C7D">
+          <End Role="SYSTAS_TALLER" Type="Self.SYSTAS_TALLER" Multiplicity="0..1" />
+          <End Role="SYSTAS_FACTURA" Type="Self.SYSTAS_FACTURA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYSTAS_TALLER">
+              <PropertyRef Name="ID_taller" />
+            </Principal>
+            <Dependent Role="SYSTAS_FACTURA">
+              <PropertyRef Name="taller_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SYSTAS_ME__Usuar__300424B4">
+          <End Role="SYSTAS_USUARIO" Type="Self.SYSTAS_USUARIO" Multiplicity="0..1" />
+          <End Role="SYSTAS_MECANICO" Type="Self.SYSTAS_MECANICO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYSTAS_USUARIO">
+              <PropertyRef Name="ID_Usuario" />
+            </Principal>
+            <Dependent Role="SYSTAS_MECANICO">
+              <PropertyRef Name="Usuario_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SYSTAS_VE__Clien__267ABA7A">
+          <End Role="SYSTAS_CLIENTES" Type="Self.SYSTAS_CLIENTES" Multiplicity="0..1" />
+          <End Role="SYSTAS_VEHICULO" Type="Self.SYSTAS_VEHICULO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYSTAS_CLIENTES">
+              <PropertyRef Name="ID_Cliente" />
+            </Principal>
+            <Dependent Role="SYSTAS_VEHICULO">
+              <PropertyRef Name="Cliente_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Systa_taller2Model1StoreContainer">
+          <EntitySet Name="SYSTAS_CLIENTES" EntityType="Self.SYSTAS_CLIENTES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SYSTAS_DETALLE_REPARACION" EntityType="Self.SYSTAS_DETALLE_REPARACION" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SYSTAS_FACTURA" EntityType="Self.SYSTAS_FACTURA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SYSTAS_INVENTARIO_REPUESTO" EntityType="Self.SYSTAS_INVENTARIO_REPUESTO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SYSTAS_MECANICO" EntityType="Self.SYSTAS_MECANICO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SYSTAS_SERVICIO" EntityType="Self.SYSTAS_SERVICIO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SYSTAS_TALLER" EntityType="Self.SYSTAS_TALLER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SYSTAS_USUARIO" EntityType="Self.SYSTAS_USUARIO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SYSTAS_VEHICULO" EntityType="Self.SYSTAS_VEHICULO" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__SYSTAS_DE__clien__398D8EEE" Association="Self.FK__SYSTAS_DE__clien__398D8EEE">
+            <End Role="SYSTAS_CLIENTES" EntitySet="SYSTAS_CLIENTES" />
+            <End Role="SYSTAS_DETALLE_REPARACION" EntitySet="SYSTAS_DETALLE_REPARACION" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SYSTAS_DE__Inven__3A81B327" Association="Self.FK__SYSTAS_DE__Inven__3A81B327">
+            <End Role="SYSTAS_INVENTARIO_REPUESTO" EntitySet="SYSTAS_INVENTARIO_REPUESTO" />
+            <End Role="SYSTAS_DETALLE_REPARACION" EntitySet="SYSTAS_DETALLE_REPARACION" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SYSTAS_DE__mecan__38996AB5" Association="Self.FK__SYSTAS_DE__mecan__38996AB5">
+            <End Role="SYSTAS_MECANICO" EntitySet="SYSTAS_MECANICO" />
+            <End Role="SYSTAS_DETALLE_REPARACION" EntitySet="SYSTAS_DETALLE_REPARACION" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SYSTAS_FA__Clien__3D5E1FD2" Association="Self.FK__SYSTAS_FA__Clien__3D5E1FD2">
+            <End Role="SYSTAS_CLIENTES" EntitySet="SYSTAS_CLIENTES" />
+            <End Role="SYSTAS_FACTURA" EntitySet="SYSTAS_FACTURA" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SYSTAS_FA__detal__412EB0B6" Association="Self.FK__SYSTAS_FA__detal__412EB0B6">
+            <End Role="SYSTAS_DETALLE_REPARACION" EntitySet="SYSTAS_DETALLE_REPARACION" />
+            <End Role="SYSTAS_FACTURA" EntitySet="SYSTAS_FACTURA" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SYSTAS_FA__mecan__3E52440B" Association="Self.FK__SYSTAS_FA__mecan__3E52440B">
+            <End Role="SYSTAS_MECANICO" EntitySet="SYSTAS_MECANICO" />
+            <End Role="SYSTAS_FACTURA" EntitySet="SYSTAS_FACTURA" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SYSTAS_FA__servi__3F466844" Association="Self.FK__SYSTAS_FA__servi__3F466844">
+            <End Role="SYSTAS_SERVICIO" EntitySet="SYSTAS_SERVICIO" />
+            <End Role="SYSTAS_FACTURA" EntitySet="SYSTAS_FACTURA" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SYSTAS_FA__talle__403A8C7D" Association="Self.FK__SYSTAS_FA__talle__403A8C7D">
+            <End Role="SYSTAS_TALLER" EntitySet="SYSTAS_TALLER" />
+            <End Role="SYSTAS_FACTURA" EntitySet="SYSTAS_FACTURA" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SYSTAS_ME__Usuar__300424B4" Association="Self.FK__SYSTAS_ME__Usuar__300424B4">
+            <End Role="SYSTAS_USUARIO" EntitySet="SYSTAS_USUARIO" />
+            <End Role="SYSTAS_MECANICO" EntitySet="SYSTAS_MECANICO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SYSTAS_VE__Clien__267ABA7A" Association="Self.FK__SYSTAS_VE__Clien__267ABA7A">
+            <End Role="SYSTAS_CLIENTES" EntitySet="SYSTAS_CLIENTES" />
+            <End Role="SYSTAS_VEHICULO" EntitySet="SYSTAS_VEHICULO" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Systa_taller2Model1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="SYSTAS_CLIENTES">
+          <Key>
+            <PropertyRef Name="ID_Cliente" />
+          </Key>
+          <Property Name="ID_Cliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre_Cliente" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Apellido_Cliente" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="cedula" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Direccion" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="telefono_Cliente" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="SYSTAS_DETALLE_REPARACION" Relationship="Self.FK__SYSTAS_DE__clien__398D8EEE" FromRole="SYSTAS_CLIENTES" ToRole="SYSTAS_DETALLE_REPARACION" />
+          <NavigationProperty Name="SYSTAS_FACTURA" Relationship="Self.FK__SYSTAS_FA__Clien__3D5E1FD2" FromRole="SYSTAS_CLIENTES" ToRole="SYSTAS_FACTURA" />
+          <NavigationProperty Name="SYSTAS_VEHICULO" Relationship="Self.FK__SYSTAS_VE__Clien__267ABA7A" FromRole="SYSTAS_CLIENTES" ToRole="SYSTAS_VEHICULO" />
+        </EntityType>
+        <EntityType Name="SYSTAS_DETALLE_REPARACION">
+          <Key>
+            <PropertyRef Name="ID_Detalle" />
+          </Key>
+          <Property Name="ID_Detalle" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Estado_Vehiculo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Piezas_usadas" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="mecanico_asignado" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="mano_obra" Type="Double" />
+          <Property Name="precio_piezas" Type="Double" />
+          <Property Name="fecha_registro" Type="DateTime" Precision="0" />
+          <Property Name="mecanico_id" Type="Int32" />
+          <Property Name="clientes_id" Type="Int32" />
+          <Property Name="Inventario_id" Type="Int32" />
+          <NavigationProperty Name="SYSTAS_CLIENTES" Relationship="Self.FK__SYSTAS_DE__clien__398D8EEE" FromRole="SYSTAS_DETALLE_REPARACION" ToRole="SYSTAS_CLIENTES" />
+          <NavigationProperty Name="SYSTAS_INVENTARIO_REPUESTO" Relationship="Self.FK__SYSTAS_DE__Inven__3A81B327" FromRole="SYSTAS_DETALLE_REPARACION" ToRole="SYSTAS_INVENTARIO_REPUESTO" />
+          <NavigationProperty Name="SYSTAS_MECANICO" Relationship="Self.FK__SYSTAS_DE__mecan__38996AB5" FromRole="SYSTAS_DETALLE_REPARACION" ToRole="SYSTAS_MECANICO" />
+          <NavigationProperty Name="SYSTAS_FACTURA" Relationship="Self.FK__SYSTAS_FA__detal__412EB0B6" FromRole="SYSTAS_DETALLE_REPARACION" ToRole="SYSTAS_FACTURA" />
+        </EntityType>
+        <EntityType Name="SYSTAS_FACTURA">
+          <Key>
+            <PropertyRef Name="ID_Factura" />
+          </Key>
+          <Property Name="ID_Factura" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Fecha_Factura" Type="DateTime" Precision="0" />
+          <Property Name="Cliente_id" Type="Int32" />
+          <Property Name="mecanico_id" Type="Int32" />
+          <Property Name="servicio_id" Type="Int32" />
+          <Property Name="taller_id" Type="Int32" />
+          <Property Name="repuestos_usados" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="costo_servicio" Type="Double" />
+          <Property Name="subtotal_piezas" Type="Double" />
+          <Property Name="total" Type="Double" />
+          <Property Name="detalle_id" Type="Int32" />
+          <NavigationProperty Name="SYSTAS_CLIENTES" Relationship="Self.FK__SYSTAS_FA__Clien__3D5E1FD2" FromRole="SYSTAS_FACTURA" ToRole="SYSTAS_CLIENTES" />
+          <NavigationProperty Name="SYSTAS_DETALLE_REPARACION" Relationship="Self.FK__SYSTAS_FA__detal__412EB0B6" FromRole="SYSTAS_FACTURA" ToRole="SYSTAS_DETALLE_REPARACION" />
+          <NavigationProperty Name="SYSTAS_MECANICO" Relationship="Self.FK__SYSTAS_FA__mecan__3E52440B" FromRole="SYSTAS_FACTURA" ToRole="SYSTAS_MECANICO" />
+          <NavigationProperty Name="SYSTAS_SERVICIO" Relationship="Self.FK__SYSTAS_FA__servi__3F466844" FromRole="SYSTAS_FACTURA" ToRole="SYSTAS_SERVICIO" />
+          <NavigationProperty Name="SYSTAS_TALLER" Relationship="Self.FK__SYSTAS_FA__talle__403A8C7D" FromRole="SYSTAS_FACTURA" ToRole="SYSTAS_TALLER" />
+        </EntityType>
+        <EntityType Name="SYSTAS_INVENTARIO_REPUESTO">
+          <Key>
+            <PropertyRef Name="ID_inventario" />
+          </Key>
+          <Property Name="ID_inventario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre_pieza" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="cantidad_pieza" Type="Int32" />
+          <Property Name="precio_pieza" Type="Double" />
+          <Property Name="pieza_nueva" Type="Boolean" />
+          <Property Name="pieza_usada" Type="Boolean" />
+          <NavigationProperty Name="SYSTAS_DETALLE_REPARACION" Relationship="Self.FK__SYSTAS_DE__Inven__3A81B327" FromRole="SYSTAS_INVENTARIO_REPUESTO" ToRole="SYSTAS_DETALLE_REPARACION" />
+        </EntityType>
+        <EntityType Name="SYSTAS_MECANICO">
+          <Key>
+            <PropertyRef Name="ID_Mecanico" />
+          </Key>
+          <Property Name="ID_Mecanico" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre_mecanico" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="apellido_mecanico" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="cedula_mecanico" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="fecha_nac" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Disponible" Type="Boolean" />
+          <Property Name="Usuario_id" Type="Int32" />
+          <NavigationProperty Name="SYSTAS_DETALLE_REPARACION" Relationship="Self.FK__SYSTAS_DE__mecan__38996AB5" FromRole="SYSTAS_MECANICO" ToRole="SYSTAS_DETALLE_REPARACION" />
+          <NavigationProperty Name="SYSTAS_FACTURA" Relationship="Self.FK__SYSTAS_FA__mecan__3E52440B" FromRole="SYSTAS_MECANICO" ToRole="SYSTAS_FACTURA" />
+          <NavigationProperty Name="SYSTAS_USUARIO" Relationship="Self.FK__SYSTAS_ME__Usuar__300424B4" FromRole="SYSTAS_MECANICO" ToRole="SYSTAS_USUARIO" />
+        </EntityType>
+        <EntityType Name="SYSTAS_SERVICIO">
+          <Key>
+            <PropertyRef Name="id_servicio" />
+          </Key>
+          <Property Name="id_servicio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre_servicio" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="tipo_servicio" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="costo" Type="Double" />
+          <NavigationProperty Name="SYSTAS_FACTURA" Relationship="Self.FK__SYSTAS_FA__servi__3F466844" FromRole="SYSTAS_SERVICIO" ToRole="SYSTAS_FACTURA" />
+        </EntityType>
+        <EntityType Name="SYSTAS_TALLER">
+          <Key>
+            <PropertyRef Name="ID_taller" />
+          </Key>
+          <Property Name="ID_taller" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RNC" Type="Int32" />
+          <Property Name="Nombre_taller" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Telefono" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="correo" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="SYSTAS_FACTURA" Relationship="Self.FK__SYSTAS_FA__talle__403A8C7D" FromRole="SYSTAS_TALLER" ToRole="SYSTAS_FACTURA" />
+        </EntityType>
+        <EntityType Name="SYSTAS_USUARIO">
+          <Key>
+            <PropertyRef Name="ID_Usuario" />
+          </Key>
+          <Property Name="ID_Usuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre_usuario" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="apellido_usuario" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Usuario" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Clave" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="EsAdmin" Type="Boolean" />
+          <Property Name="EsMecanic" Type="Boolean" />
+          <NavigationProperty Name="SYSTAS_MECANICO" Relationship="Self.FK__SYSTAS_ME__Usuar__300424B4" FromRole="SYSTAS_USUARIO" ToRole="SYSTAS_MECANICO" />
+        </EntityType>
+        <EntityType Name="SYSTAS_VEHICULO">
+          <Key>
+            <PropertyRef Name="ID_Vehiculo" />
+          </Key>
+          <Property Name="ID_Vehiculo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Matricula" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Marca" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Modelo" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Color" Type="String" MaxLength="155" FixedLength="false" Unicode="false" />
+          <Property Name="Cliente_id" Type="Int32" />
+          <NavigationProperty Name="SYSTAS_CLIENTES" Relationship="Self.FK__SYSTAS_VE__Clien__267ABA7A" FromRole="SYSTAS_VEHICULO" ToRole="SYSTAS_CLIENTES" />
+        </EntityType>
+        <Association Name="FK__SYSTAS_DE__clien__398D8EEE">
+          <End Role="SYSTAS_CLIENTES" Type="Self.SYSTAS_CLIENTES" Multiplicity="0..1" />
+          <End Role="SYSTAS_DETALLE_REPARACION" Type="Self.SYSTAS_DETALLE_REPARACION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYSTAS_CLIENTES">
+              <PropertyRef Name="ID_Cliente" />
+            </Principal>
+            <Dependent Role="SYSTAS_DETALLE_REPARACION">
+              <PropertyRef Name="clientes_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SYSTAS_FA__Clien__3D5E1FD2">
+          <End Role="SYSTAS_CLIENTES" Type="Self.SYSTAS_CLIENTES" Multiplicity="0..1" />
+          <End Role="SYSTAS_FACTURA" Type="Self.SYSTAS_FACTURA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYSTAS_CLIENTES">
+              <PropertyRef Name="ID_Cliente" />
+            </Principal>
+            <Dependent Role="SYSTAS_FACTURA">
+              <PropertyRef Name="Cliente_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SYSTAS_VE__Clien__267ABA7A">
+          <End Role="SYSTAS_CLIENTES" Type="Self.SYSTAS_CLIENTES" Multiplicity="0..1" />
+          <End Role="SYSTAS_VEHICULO" Type="Self.SYSTAS_VEHICULO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYSTAS_CLIENTES">
+              <PropertyRef Name="ID_Cliente" />
+            </Principal>
+            <Dependent Role="SYSTAS_VEHICULO">
+              <PropertyRef Name="Cliente_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SYSTAS_DE__Inven__3A81B327">
+          <End Role="SYSTAS_INVENTARIO_REPUESTO" Type="Self.SYSTAS_INVENTARIO_REPUESTO" Multiplicity="0..1" />
+          <End Role="SYSTAS_DETALLE_REPARACION" Type="Self.SYSTAS_DETALLE_REPARACION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYSTAS_INVENTARIO_REPUESTO">
+              <PropertyRef Name="ID_inventario" />
+            </Principal>
+            <Dependent Role="SYSTAS_DETALLE_REPARACION">
+              <PropertyRef Name="Inventario_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SYSTAS_DE__mecan__38996AB5">
+          <End Role="SYSTAS_MECANICO" Type="Self.SYSTAS_MECANICO" Multiplicity="0..1" />
+          <End Role="SYSTAS_DETALLE_REPARACION" Type="Self.SYSTAS_DETALLE_REPARACION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYSTAS_MECANICO">
+              <PropertyRef Name="ID_Mecanico" />
+            </Principal>
+            <Dependent Role="SYSTAS_DETALLE_REPARACION">
+              <PropertyRef Name="mecanico_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SYSTAS_FA__detal__412EB0B6">
+          <End Role="SYSTAS_DETALLE_REPARACION" Type="Self.SYSTAS_DETALLE_REPARACION" Multiplicity="0..1" />
+          <End Role="SYSTAS_FACTURA" Type="Self.SYSTAS_FACTURA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYSTAS_DETALLE_REPARACION">
+              <PropertyRef Name="ID_Detalle" />
+            </Principal>
+            <Dependent Role="SYSTAS_FACTURA">
+              <PropertyRef Name="detalle_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SYSTAS_FA__mecan__3E52440B">
+          <End Role="SYSTAS_MECANICO" Type="Self.SYSTAS_MECANICO" Multiplicity="0..1" />
+          <End Role="SYSTAS_FACTURA" Type="Self.SYSTAS_FACTURA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYSTAS_MECANICO">
+              <PropertyRef Name="ID_Mecanico" />
+            </Principal>
+            <Dependent Role="SYSTAS_FACTURA">
+              <PropertyRef Name="mecanico_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SYSTAS_FA__servi__3F466844">
+          <End Role="SYSTAS_SERVICIO" Type="Self.SYSTAS_SERVICIO" Multiplicity="0..1" />
+          <End Role="SYSTAS_FACTURA" Type="Self.SYSTAS_FACTURA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYSTAS_SERVICIO">
+              <PropertyRef Name="id_servicio" />
+            </Principal>
+            <Dependent Role="SYSTAS_FACTURA">
+              <PropertyRef Name="servicio_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SYSTAS_FA__talle__403A8C7D">
+          <End Role="SYSTAS_TALLER" Type="Self.SYSTAS_TALLER" Multiplicity="0..1" />
+          <End Role="SYSTAS_FACTURA" Type="Self.SYSTAS_FACTURA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYSTAS_TALLER">
+              <PropertyRef Name="ID_taller" />
+            </Principal>
+            <Dependent Role="SYSTAS_FACTURA">
+              <PropertyRef Name="taller_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SYSTAS_ME__Usuar__300424B4">
+          <End Role="SYSTAS_USUARIO" Type="Self.SYSTAS_USUARIO" Multiplicity="0..1" />
+          <End Role="SYSTAS_MECANICO" Type="Self.SYSTAS_MECANICO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYSTAS_USUARIO">
+              <PropertyRef Name="ID_Usuario" />
+            </Principal>
+            <Dependent Role="SYSTAS_MECANICO">
+              <PropertyRef Name="Usuario_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Systa_taller2Entities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="SYSTAS_CLIENTES" EntityType="Self.SYSTAS_CLIENTES" />
+          <EntitySet Name="SYSTAS_DETALLE_REPARACION" EntityType="Self.SYSTAS_DETALLE_REPARACION" />
+          <EntitySet Name="SYSTAS_FACTURA" EntityType="Self.SYSTAS_FACTURA" />
+          <EntitySet Name="SYSTAS_INVENTARIO_REPUESTO" EntityType="Self.SYSTAS_INVENTARIO_REPUESTO" />
+          <EntitySet Name="SYSTAS_MECANICO" EntityType="Self.SYSTAS_MECANICO" />
+          <EntitySet Name="SYSTAS_SERVICIO" EntityType="Self.SYSTAS_SERVICIO" />
+          <EntitySet Name="SYSTAS_TALLER" EntityType="Self.SYSTAS_TALLER" />
+          <EntitySet Name="SYSTAS_USUARIO" EntityType="Self.SYSTAS_USUARIO" />
+          <EntitySet Name="SYSTAS_VEHICULO" EntityType="Self.SYSTAS_VEHICULO" />
+          <AssociationSet Name="FK__SYSTAS_DE__clien__398D8EEE" Association="Self.FK__SYSTAS_DE__clien__398D8EEE">
+            <End Role="SYSTAS_CLIENTES" EntitySet="SYSTAS_CLIENTES" />
+            <End Role="SYSTAS_DETALLE_REPARACION" EntitySet="SYSTAS_DETALLE_REPARACION" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SYSTAS_FA__Clien__3D5E1FD2" Association="Self.FK__SYSTAS_FA__Clien__3D5E1FD2">
+            <End Role="SYSTAS_CLIENTES" EntitySet="SYSTAS_CLIENTES" />
+            <End Role="SYSTAS_FACTURA" EntitySet="SYSTAS_FACTURA" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SYSTAS_VE__Clien__267ABA7A" Association="Self.FK__SYSTAS_VE__Clien__267ABA7A">
+            <End Role="SYSTAS_CLIENTES" EntitySet="SYSTAS_CLIENTES" />
+            <End Role="SYSTAS_VEHICULO" EntitySet="SYSTAS_VEHICULO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SYSTAS_DE__Inven__3A81B327" Association="Self.FK__SYSTAS_DE__Inven__3A81B327">
+            <End Role="SYSTAS_INVENTARIO_REPUESTO" EntitySet="SYSTAS_INVENTARIO_REPUESTO" />
+            <End Role="SYSTAS_DETALLE_REPARACION" EntitySet="SYSTAS_DETALLE_REPARACION" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SYSTAS_DE__mecan__38996AB5" Association="Self.FK__SYSTAS_DE__mecan__38996AB5">
+            <End Role="SYSTAS_MECANICO" EntitySet="SYSTAS_MECANICO" />
+            <End Role="SYSTAS_DETALLE_REPARACION" EntitySet="SYSTAS_DETALLE_REPARACION" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SYSTAS_FA__detal__412EB0B6" Association="Self.FK__SYSTAS_FA__detal__412EB0B6">
+            <End Role="SYSTAS_DETALLE_REPARACION" EntitySet="SYSTAS_DETALLE_REPARACION" />
+            <End Role="SYSTAS_FACTURA" EntitySet="SYSTAS_FACTURA" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SYSTAS_FA__mecan__3E52440B" Association="Self.FK__SYSTAS_FA__mecan__3E52440B">
+            <End Role="SYSTAS_MECANICO" EntitySet="SYSTAS_MECANICO" />
+            <End Role="SYSTAS_FACTURA" EntitySet="SYSTAS_FACTURA" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SYSTAS_FA__servi__3F466844" Association="Self.FK__SYSTAS_FA__servi__3F466844">
+            <End Role="SYSTAS_SERVICIO" EntitySet="SYSTAS_SERVICIO" />
+            <End Role="SYSTAS_FACTURA" EntitySet="SYSTAS_FACTURA" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SYSTAS_FA__talle__403A8C7D" Association="Self.FK__SYSTAS_FA__talle__403A8C7D">
+            <End Role="SYSTAS_TALLER" EntitySet="SYSTAS_TALLER" />
+            <End Role="SYSTAS_FACTURA" EntitySet="SYSTAS_FACTURA" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SYSTAS_ME__Usuar__300424B4" Association="Self.FK__SYSTAS_ME__Usuar__300424B4">
+            <End Role="SYSTAS_USUARIO" EntitySet="SYSTAS_USUARIO" />
+            <End Role="SYSTAS_MECANICO" EntitySet="SYSTAS_MECANICO" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Systa_taller2Model1StoreContainer" CdmEntityContainer="Systa_taller2Entities1">
+          <EntitySetMapping Name="SYSTAS_CLIENTES">
+            <EntityTypeMapping TypeName="Systa_taller2Model1.SYSTAS_CLIENTES">
+              <MappingFragment StoreEntitySet="SYSTAS_CLIENTES">
+                <ScalarProperty Name="ID_Cliente" ColumnName="ID_Cliente" />
+                <ScalarProperty Name="Nombre_Cliente" ColumnName="Nombre_Cliente" />
+                <ScalarProperty Name="Apellido_Cliente" ColumnName="Apellido_Cliente" />
+                <ScalarProperty Name="cedula" ColumnName="cedula" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="telefono_Cliente" ColumnName="telefono_Cliente" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYSTAS_DETALLE_REPARACION">
+            <EntityTypeMapping TypeName="Systa_taller2Model1.SYSTAS_DETALLE_REPARACION">
+              <MappingFragment StoreEntitySet="SYSTAS_DETALLE_REPARACION">
+                <ScalarProperty Name="ID_Detalle" ColumnName="ID_Detalle" />
+                <ScalarProperty Name="Estado_Vehiculo" ColumnName="Estado_Vehiculo" />
+                <ScalarProperty Name="Piezas_usadas" ColumnName="Piezas_usadas" />
+                <ScalarProperty Name="mecanico_asignado" ColumnName="mecanico_asignado" />
+                <ScalarProperty Name="mano_obra" ColumnName="mano_obra" />
+                <ScalarProperty Name="precio_piezas" ColumnName="precio_piezas" />
+                <ScalarProperty Name="fecha_registro" ColumnName="fecha_registro" />
+                <ScalarProperty Name="mecanico_id" ColumnName="mecanico_id" />
+                <ScalarProperty Name="clientes_id" ColumnName="clientes_id" />
+                <ScalarProperty Name="Inventario_id" ColumnName="Inventario_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYSTAS_FACTURA">
+            <EntityTypeMapping TypeName="Systa_taller2Model1.SYSTAS_FACTURA">
+              <MappingFragment StoreEntitySet="SYSTAS_FACTURA">
+                <ScalarProperty Name="ID_Factura" ColumnName="ID_Factura" />
+                <ScalarProperty Name="Fecha_Factura" ColumnName="Fecha_Factura" />
+                <ScalarProperty Name="Cliente_id" ColumnName="Cliente_id" />
+                <ScalarProperty Name="mecanico_id" ColumnName="mecanico_id" />
+                <ScalarProperty Name="servicio_id" ColumnName="servicio_id" />
+                <ScalarProperty Name="taller_id" ColumnName="taller_id" />
+                <ScalarProperty Name="repuestos_usados" ColumnName="repuestos_usados" />
+                <ScalarProperty Name="costo_servicio" ColumnName="costo_servicio" />
+                <ScalarProperty Name="subtotal_piezas" ColumnName="subtotal_piezas" />
+                <ScalarProperty Name="total" ColumnName="total" />
+                <ScalarProperty Name="detalle_id" ColumnName="detalle_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYSTAS_INVENTARIO_REPUESTO">
+            <EntityTypeMapping TypeName="Systa_taller2Model1.SYSTAS_INVENTARIO_REPUESTO">
+              <MappingFragment StoreEntitySet="SYSTAS_INVENTARIO_REPUESTO">
+                <ScalarProperty Name="ID_inventario" ColumnName="ID_inventario" />
+                <ScalarProperty Name="nombre_pieza" ColumnName="nombre_pieza" />
+                <ScalarProperty Name="cantidad_pieza" ColumnName="cantidad_pieza" />
+                <ScalarProperty Name="precio_pieza" ColumnName="precio_pieza" />
+                <ScalarProperty Name="pieza_nueva" ColumnName="pieza_nueva" />
+                <ScalarProperty Name="pieza_usada" ColumnName="pieza_usada" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYSTAS_MECANICO">
+            <EntityTypeMapping TypeName="Systa_taller2Model1.SYSTAS_MECANICO">
+              <MappingFragment StoreEntitySet="SYSTAS_MECANICO">
+                <ScalarProperty Name="ID_Mecanico" ColumnName="ID_Mecanico" />
+                <ScalarProperty Name="nombre_mecanico" ColumnName="nombre_mecanico" />
+                <ScalarProperty Name="apellido_mecanico" ColumnName="apellido_mecanico" />
+                <ScalarProperty Name="cedula_mecanico" ColumnName="cedula_mecanico" />
+                <ScalarProperty Name="fecha_nac" ColumnName="fecha_nac" />
+                <ScalarProperty Name="Disponible" ColumnName="Disponible" />
+                <ScalarProperty Name="Usuario_id" ColumnName="Usuario_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYSTAS_SERVICIO">
+            <EntityTypeMapping TypeName="Systa_taller2Model1.SYSTAS_SERVICIO">
+              <MappingFragment StoreEntitySet="SYSTAS_SERVICIO">
+                <ScalarProperty Name="id_servicio" ColumnName="id_servicio" />
+                <ScalarProperty Name="nombre_servicio" ColumnName="nombre_servicio" />
+                <ScalarProperty Name="tipo_servicio" ColumnName="tipo_servicio" />
+                <ScalarProperty Name="costo" ColumnName="costo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYSTAS_TALLER">
+            <EntityTypeMapping TypeName="Systa_taller2Model1.SYSTAS_TALLER">
+              <MappingFragment StoreEntitySet="SYSTAS_TALLER">
+                <ScalarProperty Name="ID_taller" ColumnName="ID_taller" />
+                <ScalarProperty Name="RNC" ColumnName="RNC" />
+                <ScalarProperty Name="Nombre_taller" ColumnName="Nombre_taller" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="correo" ColumnName="correo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYSTAS_USUARIO">
+            <EntityTypeMapping TypeName="Systa_taller2Model1.SYSTAS_USUARIO">
+              <MappingFragment StoreEntitySet="SYSTAS_USUARIO">
+                <ScalarProperty Name="ID_Usuario" ColumnName="ID_Usuario" />
+                <ScalarProperty Name="nombre_usuario" ColumnName="nombre_usuario" />
+                <ScalarProperty Name="apellido_usuario" ColumnName="apellido_usuario" />
+                <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+                <ScalarProperty Name="Clave" ColumnName="Clave" />
+                <ScalarProperty Name="EsAdmin" ColumnName="EsAdmin" />
+                <ScalarProperty Name="EsMecanic" ColumnName="EsMecanic" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYSTAS_VEHICULO">
+            <EntityTypeMapping TypeName="Systa_taller2Model1.SYSTAS_VEHICULO">
+              <MappingFragment StoreEntitySet="SYSTAS_VEHICULO">
+                <ScalarProperty Name="ID_Vehiculo" ColumnName="ID_Vehiculo" />
+                <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+                <ScalarProperty Name="Marca" ColumnName="Marca" />
+                <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+                <ScalarProperty Name="Color" ColumnName="Color" />
+                <ScalarProperty Name="Cliente_id" ColumnName="Cliente_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

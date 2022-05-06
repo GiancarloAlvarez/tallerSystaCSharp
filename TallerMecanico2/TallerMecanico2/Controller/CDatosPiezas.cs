@@ -5,16 +5,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TallerMecanico2.Model;
 
 namespace TallerMecanico2.Controller
 {
+    //Entity INFOTEP: Systa_taller1Entities
+    //Entity Casa: Systa_taller1Entities2
+
     internal class CDatosPiezas
     {
-        Model.Systa_taller1Entities db;
+        Model.Systa_taller2Entities1 db;
 
         public void Insert(Model.SYSTAS_INVENTARIO_REPUESTO Piezas)
         {
-            using (db = new Model.Systa_taller1Entities())
+            using (db = new Model.Systa_taller2Entities1())
             {
                 try
                 {
@@ -38,7 +42,7 @@ namespace TallerMecanico2.Controller
 
             try
             {
-                using (db = new Model.Systa_taller1Entities())
+                using (db = new Systa_taller2Entities1())
                 {
 
                     return db.SYSTAS_INVENTARIO_REPUESTO.ToList();
@@ -54,12 +58,12 @@ namespace TallerMecanico2.Controller
 
         }
 
-        public void update(Model.SYSTAS_INVENTARIO_REPUESTO Piezas)
+        public void update(SYSTAS_INVENTARIO_REPUESTO Piezas)
         {
 
             try
             {
-                using (db = new Model.Systa_taller1Entities())
+                using (db = new Systa_taller2Entities1())
                 {
 
                     db.Entry(Piezas).State = EntityState.Modified;
@@ -79,7 +83,7 @@ namespace TallerMecanico2.Controller
 
             try
             {
-                using (db = new Model.Systa_taller1Entities())
+                using (db = new Systa_taller2Entities1())
                 {
                     db.SYSTAS_INVENTARIO_REPUESTO.Remove(db.SYSTAS_INVENTARIO_REPUESTO.Single(s => s.ID_inventario == sID));
                     db.SaveChanges();
@@ -95,11 +99,11 @@ namespace TallerMecanico2.Controller
 
         }
 
-        public List<Model.SYSTAS_INVENTARIO_REPUESTO> Search(int sID)
+        public List<SYSTAS_INVENTARIO_REPUESTO> Search(int sID)
         {
             try
             {
-                using (db = new Model.Systa_taller1Entities())
+                using (db = new Systa_taller2Entities1())
                 {
 
                     return db.SYSTAS_INVENTARIO_REPUESTO.Where(s => s.ID_inventario == sID).ToList();
@@ -113,11 +117,11 @@ namespace TallerMecanico2.Controller
 
         }
 
-        public List<Model.SYSTAS_INVENTARIO_REPUESTO> SearchName(String sName)
+        public List<SYSTAS_INVENTARIO_REPUESTO> SearchName(String sName)
         {
             try
             {
-                using (db = new Model.Systa_taller1Entities())
+                using (db = new Systa_taller2Entities1())
                 {
 
                     return db.SYSTAS_INVENTARIO_REPUESTO.Where(s => s.nombre_pieza.Contains(sName)).ToList();

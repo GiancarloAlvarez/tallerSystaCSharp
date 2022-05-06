@@ -18,9 +18,7 @@ namespace TallerMecanico2.Model
         public SYSTAS_MECANICO()
         {
             this.SYSTAS_DETALLE_REPARACION = new HashSet<SYSTAS_DETALLE_REPARACION>();
-            this.SYSTAS_DETALLE_REPARACION1 = new HashSet<SYSTAS_DETALLE_REPARACION>();
             this.SYSTAS_FACTURA = new HashSet<SYSTAS_FACTURA>();
-            this.SYSTAS_FACTURA1 = new HashSet<SYSTAS_FACTURA>();
         }
     
         public int ID_Mecanico { get; set; }
@@ -29,16 +27,12 @@ namespace TallerMecanico2.Model
         public string cedula_mecanico { get; set; }
         public string fecha_nac { get; set; }
         public Nullable<bool> Disponible { get; set; }
-        public int Usuario_id { get; set; }
+        public Nullable<int> Usuario_id { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SYSTAS_DETALLE_REPARACION> SYSTAS_DETALLE_REPARACION { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SYSTAS_DETALLE_REPARACION> SYSTAS_DETALLE_REPARACION1 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SYSTAS_FACTURA> SYSTAS_FACTURA { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SYSTAS_FACTURA> SYSTAS_FACTURA1 { get; set; }
         public virtual SYSTAS_USUARIO SYSTAS_USUARIO { get; set; }
     }
 }
