@@ -31,10 +31,10 @@ namespace TallerMecanico2.Model
         public int clientes_id { get; set; }
         public int Inventario_id { get; set; }
     
-        public virtual SYSTAS_MECANICO SYSTAS_MECANICO { get; set; }
+        public virtual SYSTAS_CLIENTES SYSTAS_CLIENTES { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SYSTAS_FACTURA> SYSTAS_FACTURA { get; set; }
         public virtual SYSTAS_INVENTARIO_REPUESTO SYSTAS_INVENTARIO_REPUESTO { get; set; }
-        public virtual SYSTAS_MECANICO SYSTAS_MECANICO1 { get; set; }
+        public virtual SYSTAS_MECANICO SYSTAS_MECANICO { get; set; }
     }
 }
