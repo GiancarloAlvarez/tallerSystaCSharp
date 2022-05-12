@@ -17,7 +17,7 @@ namespace TallerMecanico2.Model
         public int ID_taller { get; set; }
         public Nullable<int> RNC { get; set; }
         public string Nombre_taller { get; set; }
-        public Nullable<int> Telefono { get; set; }
+        public string Telefono { get; set; }
         public string correo { get; set; }
     }
 }

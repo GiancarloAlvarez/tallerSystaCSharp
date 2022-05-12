@@ -29,39 +29,37 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.tBColor = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tBMatricula = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.tBModelo = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.tBMarca = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.btnGuardar = new FontAwesome.Sharp.IconButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.mTBTelefono = new System.Windows.Forms.MaskedTextBox();
+            this.tbDireccion = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbCedula = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbApellido = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnUpdate = new FontAwesome.Sharp.IconButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgCliente = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dgVehiculo = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.btnLimpiar = new FontAwesome.Sharp.IconButton();
+            this.btnMostrar = new FontAwesome.Sharp.IconButton();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.iconButton6 = new FontAwesome.Sharp.IconButton();
-            this.iconButton5 = new FontAwesome.Sharp.IconButton();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.btnSearchID = new FontAwesome.Sharp.IconButton();
+            this.txtBuscarId = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -74,13 +72,13 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox5);
+            this.groupBox2.Controls.Add(this.tBColor);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.textBox6);
+            this.groupBox2.Controls.Add(this.tBMatricula);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.textBox7);
+            this.groupBox2.Controls.Add(this.tBModelo);
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.textBox8);
+            this.groupBox2.Controls.Add(this.tBMarca);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Location = new System.Drawing.Point(348, 66);
             this.groupBox2.Name = "groupBox2";
@@ -89,12 +87,12 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Vehiculo";
             // 
-            // textBox5
+            // tBColor
             // 
-            this.textBox5.Location = new System.Drawing.Point(13, 285);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(247, 20);
-            this.textBox5.TabIndex = 1;
+            this.tBColor.Location = new System.Drawing.Point(13, 285);
+            this.tBColor.Name = "tBColor";
+            this.tBColor.Size = new System.Drawing.Size(247, 20);
+            this.tBColor.TabIndex = 1;
             // 
             // label7
             // 
@@ -102,16 +100,16 @@
             this.label7.Location = new System.Drawing.Point(9, 258);
             this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(50, 13);
+            this.label7.Size = new System.Drawing.Size(31, 13);
             this.label7.TabIndex = 0;
-            this.label7.Text = "Matricula";
+            this.label7.Text = "Color";
             // 
-            // textBox6
+            // tBMatricula
             // 
-            this.textBox6.Location = new System.Drawing.Point(13, 221);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(247, 20);
-            this.textBox6.TabIndex = 1;
+            this.tBMatricula.Location = new System.Drawing.Point(13, 221);
+            this.tBMatricula.Name = "tBMatricula";
+            this.tBMatricula.Size = new System.Drawing.Size(247, 20);
+            this.tBMatricula.TabIndex = 1;
             // 
             // label8
             // 
@@ -119,16 +117,16 @@
             this.label8.Location = new System.Drawing.Point(9, 194);
             this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(49, 13);
+            this.label8.Size = new System.Drawing.Size(50, 13);
             this.label8.TabIndex = 0;
-            this.label8.Text = "Mstricula";
+            this.label8.Text = "Matricula";
             // 
-            // textBox7
+            // tBModelo
             // 
-            this.textBox7.Location = new System.Drawing.Point(13, 150);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(247, 20);
-            this.textBox7.TabIndex = 1;
+            this.tBModelo.Location = new System.Drawing.Point(13, 150);
+            this.tBModelo.Name = "tBModelo";
+            this.tBModelo.Size = new System.Drawing.Size(247, 20);
+            this.tBModelo.TabIndex = 1;
             // 
             // label9
             // 
@@ -140,12 +138,12 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "Modelo";
             // 
-            // textBox8
+            // tBMarca
             // 
-            this.textBox8.Location = new System.Drawing.Point(13, 83);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(247, 20);
-            this.textBox8.TabIndex = 1;
+            this.tBMarca.Location = new System.Drawing.Point(13, 83);
+            this.tBMarca.Name = "tBMarca";
+            this.tBMarca.Size = new System.Drawing.Size(247, 20);
+            this.tBMarca.TabIndex = 1;
             // 
             // label10
             // 
@@ -157,29 +155,30 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "Marca";
             // 
-            // iconButton2
+            // btnGuardar
             // 
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton2.IconColor = System.Drawing.Color.Black;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.Location = new System.Drawing.Point(39, 37);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(119, 50);
-            this.iconButton2.TabIndex = 3;
-            this.iconButton2.Text = "Guardar";
-            this.iconButton2.UseVisualStyleBackColor = true;
+            this.btnGuardar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnGuardar.IconColor = System.Drawing.Color.Black;
+            this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGuardar.Location = new System.Drawing.Point(39, 37);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(119, 50);
+            this.btnGuardar.TabIndex = 3;
+            this.btnGuardar.Text = "Insertar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.maskedTextBox1);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.mTBTelefono);
+            this.groupBox1.Controls.Add(this.tbDireccion);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.tbCedula);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.tbApellido);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.tbNombre);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(5, 66);
             this.groupBox1.Name = "groupBox1";
@@ -188,20 +187,20 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cliente";
             // 
-            // maskedTextBox1
+            // mTBTelefono
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(13, 369);
-            this.maskedTextBox1.Mask = "000-000-0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(247, 20);
-            this.maskedTextBox1.TabIndex = 2;
+            this.mTBTelefono.Location = new System.Drawing.Point(13, 369);
+            this.mTBTelefono.Mask = "9990000000";
+            this.mTBTelefono.Name = "mTBTelefono";
+            this.mTBTelefono.Size = new System.Drawing.Size(247, 20);
+            this.mTBTelefono.TabIndex = 2;
             // 
-            // textBox4
+            // tbDireccion
             // 
-            this.textBox4.Location = new System.Drawing.Point(13, 285);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(247, 20);
-            this.textBox4.TabIndex = 1;
+            this.tbDireccion.Location = new System.Drawing.Point(13, 285);
+            this.tbDireccion.Name = "tbDireccion";
+            this.tbDireccion.Size = new System.Drawing.Size(247, 20);
+            this.tbDireccion.TabIndex = 1;
             // 
             // label5
             // 
@@ -223,12 +222,12 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Direccion";
             // 
-            // textBox3
+            // tbCedula
             // 
-            this.textBox3.Location = new System.Drawing.Point(13, 221);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(247, 20);
-            this.textBox3.TabIndex = 1;
+            this.tbCedula.Location = new System.Drawing.Point(13, 221);
+            this.tbCedula.Name = "tbCedula";
+            this.tbCedula.Size = new System.Drawing.Size(247, 20);
+            this.tbCedula.TabIndex = 1;
             // 
             // label3
             // 
@@ -240,12 +239,12 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Cedula";
             // 
-            // textBox2
+            // tbApellido
             // 
-            this.textBox2.Location = new System.Drawing.Point(13, 150);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(247, 20);
-            this.textBox2.TabIndex = 1;
+            this.tbApellido.Location = new System.Drawing.Point(13, 150);
+            this.tbApellido.Name = "tbApellido";
+            this.tbApellido.Size = new System.Drawing.Size(247, 20);
+            this.tbApellido.TabIndex = 1;
             // 
             // label2
             // 
@@ -257,12 +256,12 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Apellido";
             // 
-            // textBox1
+            // tbNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(13, 83);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(247, 20);
-            this.textBox1.TabIndex = 1;
+            this.tbNombre.Location = new System.Drawing.Point(13, 83);
+            this.tbNombre.Name = "tbNombre";
+            this.tbNombre.Size = new System.Drawing.Size(247, 20);
+            this.tbNombre.TabIndex = 1;
             // 
             // label1
             // 
@@ -274,24 +273,25 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre";
             // 
-            // iconButton1
+            // btnUpdate
             // 
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(164, 37);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(119, 50);
-            this.iconButton1.TabIndex = 3;
-            this.iconButton1.Text = "Guardar";
-            this.iconButton1.UseVisualStyleBackColor = true;
+            this.btnUpdate.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnUpdate.IconColor = System.Drawing.Color.Black;
+            this.btnUpdate.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnUpdate.Location = new System.Drawing.Point(164, 37);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(119, 50);
+            this.btnUpdate.TabIndex = 3;
+            this.btnUpdate.Text = "Editar";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dgCliente);
-            this.groupBox3.Location = new System.Drawing.Point(703, 111);
+            this.groupBox3.Location = new System.Drawing.Point(704, 111);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(752, 288);
+            this.groupBox3.Size = new System.Drawing.Size(531, 288);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Cliente";
@@ -302,16 +302,16 @@
             this.dgCliente.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgCliente.Location = new System.Drawing.Point(3, 16);
             this.dgCliente.Name = "dgCliente";
-            this.dgCliente.Size = new System.Drawing.Size(746, 269);
+            this.dgCliente.Size = new System.Drawing.Size(525, 269);
             this.dgCliente.TabIndex = 0;
-            this.dgCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCliente_CellContentClick);
+            this.dgCliente.DoubleClick += new System.EventHandler(this.dgCliente_DoubleClick);
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.dgVehiculo);
-            this.groupBox4.Location = new System.Drawing.Point(703, 411);
+            this.groupBox4.Location = new System.Drawing.Point(704, 411);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(752, 288);
+            this.groupBox4.Size = new System.Drawing.Size(531, 288);
             this.groupBox4.TabIndex = 5;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Vehiculo";
@@ -322,15 +322,16 @@
             this.dgVehiculo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgVehiculo.Location = new System.Drawing.Point(3, 16);
             this.dgVehiculo.Name = "dgVehiculo";
-            this.dgVehiculo.Size = new System.Drawing.Size(746, 269);
+            this.dgVehiculo.Size = new System.Drawing.Size(525, 269);
             this.dgVehiculo.TabIndex = 0;
+            this.dgVehiculo.DoubleClick += new System.EventHandler(this.dgVehiculo_DoubleClick);
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.iconButton4);
-            this.groupBox5.Controls.Add(this.iconButton3);
-            this.groupBox5.Controls.Add(this.iconButton1);
-            this.groupBox5.Controls.Add(this.iconButton2);
+            this.groupBox5.Controls.Add(this.btnLimpiar);
+            this.groupBox5.Controls.Add(this.btnMostrar);
+            this.groupBox5.Controls.Add(this.btnUpdate);
+            this.groupBox5.Controls.Add(this.btnGuardar);
             this.groupBox5.Location = new System.Drawing.Point(12, 499);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(673, 112);
@@ -338,87 +339,67 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "groupBox5";
             // 
-            // iconButton4
+            // btnLimpiar
             // 
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton4.IconColor = System.Drawing.Color.Black;
-            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.Location = new System.Drawing.Point(423, 37);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Size = new System.Drawing.Size(119, 50);
-            this.iconButton4.TabIndex = 3;
-            this.iconButton4.Text = "Guardar";
-            this.iconButton4.UseVisualStyleBackColor = true;
+            this.btnLimpiar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnLimpiar.IconColor = System.Drawing.Color.Black;
+            this.btnLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLimpiar.Location = new System.Drawing.Point(423, 37);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(119, 50);
+            this.btnLimpiar.TabIndex = 3;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
-            // iconButton3
+            // btnMostrar
             // 
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton3.IconColor = System.Drawing.Color.Black;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.Location = new System.Drawing.Point(298, 37);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(119, 50);
-            this.iconButton3.TabIndex = 3;
-            this.iconButton3.Text = "Guardar";
-            this.iconButton3.UseVisualStyleBackColor = true;
+            this.btnMostrar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnMostrar.IconColor = System.Drawing.Color.Black;
+            this.btnMostrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMostrar.Location = new System.Drawing.Point(298, 37);
+            this.btnMostrar.Name = "btnMostrar";
+            this.btnMostrar.Size = new System.Drawing.Size(119, 50);
+            this.btnMostrar.TabIndex = 3;
+            this.btnMostrar.Text = "Mostrar";
+            this.btnMostrar.UseVisualStyleBackColor = true;
+            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.iconButton6);
-            this.groupBox7.Controls.Add(this.iconButton5);
-            this.groupBox7.Controls.Add(this.textBox10);
-            this.groupBox7.Controls.Add(this.textBox9);
-            this.groupBox7.Location = new System.Drawing.Point(706, 32);
+            this.groupBox7.Controls.Add(this.btnSearchID);
+            this.groupBox7.Controls.Add(this.txtBuscarId);
+            this.groupBox7.Location = new System.Drawing.Point(706, 35);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(529, 73);
+            this.groupBox7.Size = new System.Drawing.Size(427, 70);
             this.groupBox7.TabIndex = 6;
             this.groupBox7.TabStop = false;
             // 
-            // iconButton6
+            // btnSearchID
             // 
-            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.iconButton6.IconColor = System.Drawing.Color.Black;
-            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconButton6.IconSize = 24;
-            this.iconButton6.Location = new System.Drawing.Point(431, 30);
-            this.iconButton6.Name = "iconButton6";
-            this.iconButton6.Size = new System.Drawing.Size(68, 34);
-            this.iconButton6.TabIndex = 5;
-            this.iconButton6.UseVisualStyleBackColor = true;
+            this.btnSearchID.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btnSearchID.IconColor = System.Drawing.Color.Black;
+            this.btnSearchID.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnSearchID.IconSize = 24;
+            this.btnSearchID.Location = new System.Drawing.Point(338, 30);
+            this.btnSearchID.Name = "btnSearchID";
+            this.btnSearchID.Size = new System.Drawing.Size(68, 34);
+            this.btnSearchID.TabIndex = 5;
+            this.btnSearchID.UseVisualStyleBackColor = true;
+            this.btnSearchID.Click += new System.EventHandler(this.btnSearchID_Click);
             // 
-            // iconButton5
+            // txtBuscarId
             // 
-            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.iconButton5.IconColor = System.Drawing.Color.Black;
-            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconButton5.IconSize = 24;
-            this.iconButton5.Location = new System.Drawing.Point(185, 30);
-            this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Size = new System.Drawing.Size(68, 34);
-            this.iconButton5.TabIndex = 5;
-            this.iconButton5.UseVisualStyleBackColor = true;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(6, 30);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(182, 34);
-            this.textBox10.TabIndex = 4;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(284, 30);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(150, 34);
-            this.textBox9.TabIndex = 4;
+            this.txtBuscarId.Location = new System.Drawing.Point(6, 38);
+            this.txtBuscarId.Name = "txtBuscarId";
+            this.txtBuscarId.Size = new System.Drawing.Size(326, 20);
+            this.txtBuscarId.TabIndex = 4;
             // 
             // AdminClienteVehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1473, 711);
+            this.ClientSize = new System.Drawing.Size(1300, 711);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
@@ -446,38 +427,36 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox2;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private System.Windows.Forms.TextBox textBox5;
+        private FontAwesome.Sharp.IconButton btnGuardar;
+        private System.Windows.Forms.TextBox tBColor;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tBMatricula;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox tBModelo;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox tBMarca;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox groupBox1;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.TextBox textBox4;
+        private FontAwesome.Sharp.IconButton btnUpdate;
+        private System.Windows.Forms.MaskedTextBox mTBTelefono;
+        private System.Windows.Forms.TextBox tbDireccion;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbCedula;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbApellido;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbNombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dgCliente;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DataGridView dgVehiculo;
         private System.Windows.Forms.GroupBox groupBox5;
-        private FontAwesome.Sharp.IconButton iconButton4;
-        private FontAwesome.Sharp.IconButton iconButton3;
+        private FontAwesome.Sharp.IconButton btnLimpiar;
+        private FontAwesome.Sharp.IconButton btnMostrar;
         private System.Windows.Forms.GroupBox groupBox7;
-        private FontAwesome.Sharp.IconButton iconButton6;
-        private FontAwesome.Sharp.IconButton iconButton5;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
+        private FontAwesome.Sharp.IconButton btnSearchID;
+        private System.Windows.Forms.TextBox txtBuscarId;
     }
 }

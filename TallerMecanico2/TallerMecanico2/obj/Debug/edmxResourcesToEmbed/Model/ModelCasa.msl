@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="Systa_taller2ModelStoreContainer" CdmEntityContainer="Systa_taller2Entities">
+  <EntityContainerMapping StorageEntityContainer="Systa_taller1Model3StoreContainer" CdmEntityContainer="Systa_taller1Entities2">
     <EntitySetMapping Name="SYSTAS_CLIENTES">
-      <EntityTypeMapping TypeName="Systa_taller2Model.SYSTAS_CLIENTES">
+      <EntityTypeMapping TypeName="Systa_taller1Model3.SYSTAS_CLIENTES">
         <MappingFragment StoreEntitySet="SYSTAS_CLIENTES">
           <ScalarProperty Name="ID_Cliente" ColumnName="ID_Cliente" />
           <ScalarProperty Name="Nombre_Cliente" ColumnName="Nombre_Cliente" />
@@ -10,12 +10,11 @@
           <ScalarProperty Name="cedula" ColumnName="cedula" />
           <ScalarProperty Name="Direccion" ColumnName="Direccion" />
           <ScalarProperty Name="telefono_Cliente" ColumnName="telefono_Cliente" />
-          <ScalarProperty Name="Vehiculo_id1" ColumnName="Vehiculo_id1" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="SYSTAS_DETALLE_REPARACION">
-      <EntityTypeMapping TypeName="Systa_taller2Model.SYSTAS_DETALLE_REPARACION">
+      <EntityTypeMapping TypeName="Systa_taller1Model3.SYSTAS_DETALLE_REPARACION">
         <MappingFragment StoreEntitySet="SYSTAS_DETALLE_REPARACION">
           <ScalarProperty Name="ID_Detalle" ColumnName="ID_Detalle" />
           <ScalarProperty Name="Estado_Vehiculo" ColumnName="Estado_Vehiculo" />
@@ -31,7 +30,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="SYSTAS_FACTURA">
-      <EntityTypeMapping TypeName="Systa_taller2Model.SYSTAS_FACTURA">
+      <EntityTypeMapping TypeName="Systa_taller1Model3.SYSTAS_FACTURA">
         <MappingFragment StoreEntitySet="SYSTAS_FACTURA">
           <ScalarProperty Name="ID_Factura" ColumnName="ID_Factura" />
           <ScalarProperty Name="Fecha_Factura" ColumnName="Fecha_Factura" />
@@ -50,7 +49,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="SYSTAS_INVENTARIO_REPUESTO">
-      <EntityTypeMapping TypeName="Systa_taller2Model.SYSTAS_INVENTARIO_REPUESTO">
+      <EntityTypeMapping TypeName="Systa_taller1Model3.SYSTAS_INVENTARIO_REPUESTO">
         <MappingFragment StoreEntitySet="SYSTAS_INVENTARIO_REPUESTO">
           <ScalarProperty Name="ID_inventario" ColumnName="ID_inventario" />
           <ScalarProperty Name="nombre_pieza" ColumnName="nombre_pieza" />
@@ -63,7 +62,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="SYSTAS_MECANICO">
-      <EntityTypeMapping TypeName="Systa_taller2Model.SYSTAS_MECANICO">
+      <EntityTypeMapping TypeName="Systa_taller1Model3.SYSTAS_MECANICO">
         <MappingFragment StoreEntitySet="SYSTAS_MECANICO">
           <ScalarProperty Name="ID_Mecanico" ColumnName="ID_Mecanico" />
           <ScalarProperty Name="nombre_mecanico" ColumnName="nombre_mecanico" />
@@ -76,7 +75,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="SYSTAS_SERVICIO">
-      <EntityTypeMapping TypeName="Systa_taller2Model.SYSTAS_SERVICIO">
+      <EntityTypeMapping TypeName="Systa_taller1Model3.SYSTAS_SERVICIO">
         <MappingFragment StoreEntitySet="SYSTAS_SERVICIO">
           <ScalarProperty Name="id_servicio" ColumnName="id_servicio" />
           <ScalarProperty Name="nombre_servicio" ColumnName="nombre_servicio" />
@@ -86,7 +85,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="SYSTAS_TALLER">
-      <EntityTypeMapping TypeName="Systa_taller2Model.SYSTAS_TALLER">
+      <EntityTypeMapping TypeName="Systa_taller1Model3.SYSTAS_TALLER">
         <MappingFragment StoreEntitySet="SYSTAS_TALLER">
           <ScalarProperty Name="ID_taller" ColumnName="ID_taller" />
           <ScalarProperty Name="RNC" ColumnName="RNC" />
@@ -97,7 +96,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="SYSTAS_USUARIO">
-      <EntityTypeMapping TypeName="Systa_taller2Model.SYSTAS_USUARIO">
+      <EntityTypeMapping TypeName="Systa_taller1Model3.SYSTAS_USUARIO">
         <MappingFragment StoreEntitySet="SYSTAS_USUARIO">
           <ScalarProperty Name="ID_Usuario" ColumnName="ID_Usuario" />
           <ScalarProperty Name="nombre_usuario" ColumnName="nombre_usuario" />
@@ -110,7 +109,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="SYSTAS_VEHICULO">
-      <EntityTypeMapping TypeName="Systa_taller2Model.SYSTAS_VEHICULO">
+      <EntityTypeMapping TypeName="Systa_taller1Model3.SYSTAS_VEHICULO">
         <MappingFragment StoreEntitySet="SYSTAS_VEHICULO">
           <ScalarProperty Name="ID_Vehiculo" ColumnName="ID_Vehiculo" />
           <ScalarProperty Name="Matricula" ColumnName="Matricula" />
@@ -118,7 +117,6 @@
           <ScalarProperty Name="Modelo" ColumnName="Modelo" />
           <ScalarProperty Name="Color" ColumnName="Color" />
           <ScalarProperty Name="Cliente_id" ColumnName="Cliente_id" />
-          <ScalarProperty Name="FK_Cliente_id" ColumnName="FK_Cliente_id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

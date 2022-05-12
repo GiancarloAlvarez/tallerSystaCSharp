@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity;
 
-
+using TallerMecanico2.Model;
 namespace TallerMecanico2.Controller
 {
     internal class CDatosCliente
-    {
-        Model.Systa_taller1Entities db;
+    {   //Entity INFOTEP: Systa_taller1Entities
+        //Entity Casa: Systa_taller2Entities
+        Systa_taller2Entities db;
 
         public void Insert(Model.SYSTAS_CLIENTES Cliente)
         {
-            using (db = new Model.Systa_taller1Entities())
+            using (db = new Systa_taller2Entities())
             {
                 try
                 {
@@ -39,7 +40,7 @@ namespace TallerMecanico2.Controller
 
             try
             {
-                using (db = new Model.Systa_taller1Entities())
+                using (db = new Systa_taller2Entities())
                 {
 
                     return db.SYSTAS_CLIENTES.ToList();
@@ -56,12 +57,12 @@ namespace TallerMecanico2.Controller
         }
 
 
-        public void update(Model.SYSTAS_CLIENTES Cliente)
+        public void update(SYSTAS_CLIENTES Cliente)
         {
 
             try
             {
-                using (db = new Model.Systa_taller1Entities())
+                using (db = new Systa_taller2Entities())
                 {
 
                     db.Entry(Cliente).State = EntityState.Modified;
@@ -81,7 +82,7 @@ namespace TallerMecanico2.Controller
 
             try
             {
-                using (db = new Model.Systa_taller1Entities())
+                using (db = new Systa_taller2Entities())
                 {
                     db.SYSTAS_CLIENTES.Remove(db.SYSTAS_CLIENTES.Single(s => s.ID_Cliente == sID));
                     db.SaveChanges();
@@ -106,7 +107,7 @@ namespace TallerMecanico2.Controller
         {
             try
             {
-                using (db = new Model.Systa_taller1Entities())
+                using (db = new Systa_taller2Entities())
                 {
 
                     return db.SYSTAS_CLIENTES.Where(s => s.ID_Cliente == sID).ToList();
@@ -124,7 +125,7 @@ namespace TallerMecanico2.Controller
         {
             try
             {
-                using (db = new Model.Systa_taller1Entities())
+                using (db = new Systa_taller2Entities())
                 {
 
                     return db.SYSTAS_CLIENTES.Where(s => s.Nombre_Cliente.Contains(sName)).ToList();

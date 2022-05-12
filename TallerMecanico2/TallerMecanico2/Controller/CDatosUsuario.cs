@@ -8,6 +8,9 @@ using System.Windows.Forms;
 
 namespace TallerMecanico2.Controller
 {
+    //Entity INFOTEP: Systa_taller1Entities
+    //Entity Casa: Systa_taller1Entities2
+
     internal class CDatosUsuario
     {
 

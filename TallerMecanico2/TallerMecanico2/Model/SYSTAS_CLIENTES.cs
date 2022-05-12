@@ -18,6 +18,8 @@ namespace TallerMecanico2.Model
         public SYSTAS_CLIENTES()
         {
             this.SYSTAS_VEHICULO = new HashSet<SYSTAS_VEHICULO>();
+            this.SYSTAS_DETALLE_REPARACION = new HashSet<SYSTAS_DETALLE_REPARACION>();
+            this.SYSTAS_FACTURA = new HashSet<SYSTAS_FACTURA>();
         }
     
         public int ID_Cliente { get; set; }
@@ -30,5 +32,9 @@ namespace TallerMecanico2.Model
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SYSTAS_VEHICULO> SYSTAS_VEHICULO { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SYSTAS_DETALLE_REPARACION> SYSTAS_DETALLE_REPARACION { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SYSTAS_FACTURA> SYSTAS_FACTURA { get; set; }
     }
 }

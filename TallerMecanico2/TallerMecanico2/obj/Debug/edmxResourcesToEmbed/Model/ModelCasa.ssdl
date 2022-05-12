@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="Systa_taller2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="Systa_taller1Model3.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="SYSTAS_CLIENTES">
     <Key>
       <PropertyRef Name="ID_Cliente" />
@@ -10,7 +10,6 @@
     <Property Name="cedula" Type="varchar" MaxLength="255" />
     <Property Name="Direccion" Type="varchar" MaxLength="255" />
     <Property Name="telefono_Cliente" Type="int" />
-    <Property Name="Vehiculo_id1" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="SYSTAS_DETALLE_REPARACION">
     <Key>
@@ -24,8 +23,8 @@
     <Property Name="precio_piezas" Type="float" />
     <Property Name="fecha_registro" Type="date" />
     <Property Name="mecanico_id" Type="int" />
-    <Property Name="clientes_id" Type="int" />
-    <Property Name="Inventario_id" Type="int" />
+    <Property Name="clientes_id" Type="int" Nullable="false" />
+    <Property Name="Inventario_id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="SYSTAS_FACTURA">
     <Key>
@@ -33,17 +32,17 @@
     </Key>
     <Property Name="ID_Factura" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Fecha_Factura" Type="date" />
-    <Property Name="Cliente_id" Type="int" />
-    <Property Name="mecanico_id" Type="int" />
-    <Property Name="servicio_id" Type="int" />
+    <Property Name="Cliente_id" Type="int" Nullable="false" />
+    <Property Name="mecanico_id" Type="int" Nullable="false" />
+    <Property Name="servicio_id" Type="int" Nullable="false" />
     <Property Name="repuestos_usados" Type="varchar" MaxLength="255" />
     <Property Name="costo_servicio" Type="float" />
     <Property Name="subtotal_piezas" Type="float" />
     <Property Name="total" Type="float" />
     <Property Name="Servicio_id1" Type="int" />
     <Property Name="mecanico_id1" Type="int" />
-    <Property Name="clientes_id1" Type="int" />
-    <Property Name="detalle_id" Type="int" />
+    <Property Name="clientes_id1" Type="int" Nullable="false" />
+    <Property Name="detalle_id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="SYSTAS_INVENTARIO_REPUESTO">
     <Key>
@@ -67,7 +66,7 @@
     <Property Name="cedula_mecanico" Type="varchar" MaxLength="255" />
     <Property Name="fecha_nac" Type="varchar" MaxLength="255" />
     <Property Name="Disponible" Type="bit" />
-    <Property Name="Usuario_id" Type="int" />
+    <Property Name="Usuario_id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="SYSTAS_SERVICIO">
     <Key>
@@ -85,7 +84,7 @@
     <Property Name="ID_taller" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="RNC" Type="int" />
     <Property Name="Nombre_taller" Type="varchar" MaxLength="255" />
-    <Property Name="Telefono" Type="varchar" MaxLength="255" />
+    <Property Name="Telefono" Type="int" />
     <Property Name="correo" Type="varchar" MaxLength="250" />
   </EntityType>
   <EntityType Name="SYSTAS_USUARIO">
@@ -110,7 +109,7 @@
     <Property Name="Modelo" Type="varchar" MaxLength="150" />
     <Property Name="Color" Type="varchar" MaxLength="155" />
     <Property Name="Cliente_id" Type="int" />
-    <Property Name="FK_Cliente_id" Type="int" />
+    <Property Name="FK_Cliente_id" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="FK_Cliente_id">
     <End Role="SYSTAS_CLIENTES" Type="Self.SYSTAS_CLIENTES" Multiplicity="0..1" />
@@ -125,7 +124,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_clientes_id">
-    <End Role="SYSTAS_CLIENTES" Type="Self.SYSTAS_CLIENTES" Multiplicity="0..1" />
+    <End Role="SYSTAS_CLIENTES" Type="Self.SYSTAS_CLIENTES" Multiplicity="1" />
     <End Role="SYSTAS_DETALLE_REPARACION" Type="Self.SYSTAS_DETALLE_REPARACION" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="SYSTAS_CLIENTES">
@@ -137,7 +136,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_clientes_id1">
-    <End Role="SYSTAS_CLIENTES" Type="Self.SYSTAS_CLIENTES" Multiplicity="0..1" />
+    <End Role="SYSTAS_CLIENTES" Type="Self.SYSTAS_CLIENTES" Multiplicity="1" />
     <End Role="SYSTAS_FACTURA" Type="Self.SYSTAS_FACTURA" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="SYSTAS_CLIENTES">
@@ -149,7 +148,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_detalle_id">
-    <End Role="SYSTAS_DETALLE_REPARACION" Type="Self.SYSTAS_DETALLE_REPARACION" Multiplicity="0..1" />
+    <End Role="SYSTAS_DETALLE_REPARACION" Type="Self.SYSTAS_DETALLE_REPARACION" Multiplicity="1" />
     <End Role="SYSTAS_FACTURA" Type="Self.SYSTAS_FACTURA" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="SYSTAS_DETALLE_REPARACION">
@@ -161,7 +160,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Inventario_id">
-    <End Role="SYSTAS_INVENTARIO_REPUESTO" Type="Self.SYSTAS_INVENTARIO_REPUESTO" Multiplicity="0..1" />
+    <End Role="SYSTAS_INVENTARIO_REPUESTO" Type="Self.SYSTAS_INVENTARIO_REPUESTO" Multiplicity="1" />
     <End Role="SYSTAS_DETALLE_REPARACION" Type="Self.SYSTAS_DETALLE_REPARACION" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="SYSTAS_INVENTARIO_REPUESTO">
@@ -209,7 +208,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Usuario_id">
-    <End Role="SYSTAS_USUARIO" Type="Self.SYSTAS_USUARIO" Multiplicity="0..1" />
+    <End Role="SYSTAS_USUARIO" Type="Self.SYSTAS_USUARIO" Multiplicity="1" />
     <End Role="SYSTAS_MECANICO" Type="Self.SYSTAS_MECANICO" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="SYSTAS_USUARIO">
@@ -220,7 +219,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="Systa_taller2ModelStoreContainer">
+  <EntityContainer Name="Systa_taller1Model3StoreContainer">
     <EntitySet Name="SYSTAS_CLIENTES" EntityType="Self.SYSTAS_CLIENTES" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SYSTAS_DETALLE_REPARACION" EntityType="Self.SYSTAS_DETALLE_REPARACION" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SYSTAS_FACTURA" EntityType="Self.SYSTAS_FACTURA" Schema="dbo" store:Type="Tables" />

@@ -33,8 +33,8 @@ namespace TallerMecanico2.View
             clientes.Apellido_Cliente = txtClienteA.Text;
             clientes.cedula=txtClienteC.Text;
             clientes.Direccion = txtClienteD.Text;
-            clientes.telefono_Cliente = int.Parse(mtxtClienteT.Text);
-            
+            int telefono_clientes = (int)Convert.ToInt64(mtxtClienteT.Text);
+            clientes.telefono_Cliente = telefono_clientes;
 
 
         }
