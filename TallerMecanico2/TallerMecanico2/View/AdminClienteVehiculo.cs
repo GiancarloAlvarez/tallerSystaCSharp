@@ -38,8 +38,8 @@ namespace TallerMecanico2.View
             clientes.Apellido_Cliente = tbApellido.Text;
             clientes.cedula = tbCedula.Text;
             clientes.Direccion = tbDireccion.Text;
-           
-            clientes.telefono_Cliente = txtTelefono.Text;
+            int telefono_clientes = (int)Convert.ToInt64(mTBTelefono.Text);
+            clientes.telefono_Cliente = telefono_clientes;
 
 
 
@@ -52,7 +52,7 @@ namespace TallerMecanico2.View
             clientesVehiculo.Modelo = tBModelo.Text;
             clientesVehiculo.Matricula = tBMatricula.Text;
             clientesVehiculo.Color = tBColor.Text;
-            clientesVehiculo.Cliente_id = idClienteVehiculo;
+
         }
 
         public void limpiar()
@@ -62,7 +62,7 @@ namespace TallerMecanico2.View
             tbApellido.Text = String.Empty;
             tbCedula.Text = String.Empty;
             tbDireccion.Text = String.Empty;
-            txtTelefono.Text = String.Empty;
+            mTBTelefono.Text = String.Empty;
 
         }
         public void limpiarVehiculo()
@@ -106,12 +106,12 @@ namespace TallerMecanico2.View
 
         private void dgCliente_DoubleClick(object sender, EventArgs e)
         {
-            idClienteVehiculo = int.Parse(dgCliente.CurrentRow.Cells[0].Value.ToString());
+            idClienteVehiculo = (int)Convert.ToInt64(dgCliente.CurrentRow.Cells["ID_Cliente"].Value.ToString());
             tbNombre.Text = dgCliente.CurrentRow.Cells["Nombre_Cliente"].Value.ToString();
             tbApellido.Text = dgCliente.CurrentRow.Cells["Apellido_Cliente"].Value.ToString();
             tbCedula.Text = dgCliente.CurrentRow.Cells["cedula"].Value.ToString();
             tbDireccion.Text = dgCliente.CurrentRow.Cells["Direccion"].Value.ToString();
-            txtTelefono.Text = dgCliente.CurrentRow.Cells["telefono_cliente"].Value.ToString();
+            mTBTelefono.Text = dgCliente.CurrentRow.Cells["telefono_cliente"].Value.ToString();
 
         }
 
@@ -126,11 +126,8 @@ namespace TallerMecanico2.View
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            CargarDatosClient();
-            CargarDatosVehiculo();
             cliente.update(clientes);
             clienteVehiculo.update(clientesVehiculo);
-           
             limpiar();
             limpiarVehiculo();
         }

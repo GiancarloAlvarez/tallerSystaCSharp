@@ -39,6 +39,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.btnGuardar = new FontAwesome.Sharp.IconButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.mTBTelefono = new System.Windows.Forms.MaskedTextBox();
             this.tbDireccion = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -59,7 +60,6 @@
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.btnSearchID = new FontAwesome.Sharp.IconButton();
             this.txtBuscarId = new System.Windows.Forms.TextBox();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -170,7 +170,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtTelefono);
+            this.groupBox1.Controls.Add(this.mTBTelefono);
             this.groupBox1.Controls.Add(this.tbDireccion);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
@@ -186,6 +186,14 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cliente";
+            // 
+            // mTBTelefono
+            // 
+            this.mTBTelefono.Location = new System.Drawing.Point(13, 369);
+            this.mTBTelefono.Mask = "9990000000";
+            this.mTBTelefono.Name = "mTBTelefono";
+            this.mTBTelefono.Size = new System.Drawing.Size(247, 20);
+            this.mTBTelefono.TabIndex = 2;
             // 
             // tbDireccion
             // 
@@ -387,13 +395,6 @@
             this.txtBuscarId.Size = new System.Drawing.Size(326, 20);
             this.txtBuscarId.TabIndex = 4;
             // 
-            // txtTelefono
-            // 
-            this.txtTelefono.Location = new System.Drawing.Point(12, 372);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(247, 20);
-            this.txtTelefono.TabIndex = 1;
-            // 
             // AdminClienteVehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -437,6 +438,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox groupBox1;
         private FontAwesome.Sharp.IconButton btnUpdate;
+        private System.Windows.Forms.MaskedTextBox mTBTelefono;
         private System.Windows.Forms.TextBox tbDireccion;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -456,6 +458,5 @@
         private System.Windows.Forms.GroupBox groupBox7;
         private FontAwesome.Sharp.IconButton btnSearchID;
         private System.Windows.Forms.TextBox txtBuscarId;
-        private System.Windows.Forms.TextBox txtTelefono;
     }
 }
