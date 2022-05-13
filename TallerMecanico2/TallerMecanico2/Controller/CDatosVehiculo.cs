@@ -10,27 +10,23 @@ using TallerMecanico2.Model;
 
 
 namespace TallerMecanico2.Controller
-{//Entity INFOTEP: Systa_taller1Entities
+{//Entity INFOTEP: Systa_taller2Entities4
  //Entity Casa2: Systa_taller2Entities1
- //Entity Casa: Systa_taller2Entities
+ //Entity Casa: Systa_taller2Entities3
 
     internal class CDatosVehiculo
     {
-        Systa_taller2Entities1 db;
+        Systa_taller2Entities4 db;
         public void Insert(SYSTAS_VEHICULO Vehiculo)
         {
-            using (db = new Systa_taller2Entities1())
+            using (db = new Systa_taller2Entities4())
             {
-                try
-                {
+                
+                
                     db.SYSTAS_VEHICULO.Add(Vehiculo);
                     db.SaveChanges();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-
-                }
+                
+                
 
 
             }
@@ -41,19 +37,15 @@ namespace TallerMecanico2.Controller
         public List<SYSTAS_VEHICULO> Read()
         {
 
-            try
-            {
-                using (db = new Systa_taller2Entities1())
+            
+            
+                using (db = new Systa_taller2Entities4())
                 {
 
                     return db.SYSTAS_VEHICULO.ToList();
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                return null;
-            }
+            
+           
 
 
 
@@ -62,78 +54,61 @@ namespace TallerMecanico2.Controller
         public void update(Model.SYSTAS_VEHICULO Vehiculo)
         {
 
-            try
-            {
-                using (db = new Systa_taller2Entities1())
+            
+            
+                using (db = new Systa_taller2Entities4())
                 {
 
                     db.Entry(Vehiculo).State = EntityState.Modified;
                     db.SaveChanges();
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-
-            }
+            
+            
 
         }
 
         public void Delete(int sID)
         {
 
-            try
-            {
-                using (db = new Systa_taller2Entities1())
+            
+            
+                using (db = new Systa_taller2Entities4())
                 {
                     db.SYSTAS_VEHICULO.Remove(db.SYSTAS_VEHICULO.Single(s => s.ID_Vehiculo == sID));
                     db.SaveChanges();
 
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-
-            }
+           
 
 
         }
 
         public List<SYSTAS_VEHICULO> Search(int sID)
         {
-            try
-            {
-                using (db = new Systa_taller2Entities1())
+            
+            
+                using (db = new Systa_taller2Entities4())
                 {
 
                     return db.SYSTAS_VEHICULO.Where(s => s.ID_Vehiculo == sID).ToList();
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                return null;
-            }
+            
+            
+            
 
         }
 
         public List<SYSTAS_VEHICULO> SearchName(String sName)
         {
-            try
-            {
-                using (db = new Systa_taller2Entities1())
+            
+            
+                using (db = new Systa_taller2Entities4())
                 {
 
                     return db.SYSTAS_VEHICULO.Where(s => s.Marca.Contains(sName)).ToList();
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                return null;
-            }
-
+            
+           
         }
 
 

@@ -39,6 +39,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.btnGuardar = new FontAwesome.Sharp.IconButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tbTelefono = new System.Windows.Forms.TextBox();
             this.tbDireccion = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -54,12 +55,12 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dgVehiculo = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnLimpiar = new FontAwesome.Sharp.IconButton();
             this.btnMostrar = new FontAwesome.Sharp.IconButton();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.btnSearchID = new FontAwesome.Sharp.IconButton();
             this.txtBuscarId = new System.Windows.Forms.TextBox();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -86,6 +87,7 @@
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Vehiculo";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // tBColor
             // 
@@ -160,17 +162,17 @@
             this.btnGuardar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnGuardar.IconColor = System.Drawing.Color.Black;
             this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnGuardar.Location = new System.Drawing.Point(39, 37);
+            this.btnGuardar.Location = new System.Drawing.Point(49, 31);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(119, 50);
+            this.btnGuardar.Size = new System.Drawing.Size(82, 50);
             this.btnGuardar.TabIndex = 3;
             this.btnGuardar.Text = "Insertar";
             this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtTelefono);
+            this.groupBox1.Controls.Add(this.tbTelefono);
             this.groupBox1.Controls.Add(this.tbDireccion);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
@@ -186,6 +188,13 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cliente";
+            // 
+            // tbTelefono
+            // 
+            this.tbTelefono.Location = new System.Drawing.Point(13, 374);
+            this.tbTelefono.Name = "tbTelefono";
+            this.tbTelefono.Size = new System.Drawing.Size(247, 20);
+            this.tbTelefono.TabIndex = 1;
             // 
             // tbDireccion
             // 
@@ -270,13 +279,13 @@
             this.btnUpdate.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnUpdate.IconColor = System.Drawing.Color.Black;
             this.btnUpdate.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnUpdate.Location = new System.Drawing.Point(164, 37);
+            this.btnUpdate.Location = new System.Drawing.Point(137, 31);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(119, 50);
+            this.btnUpdate.Size = new System.Drawing.Size(82, 50);
             this.btnUpdate.TabIndex = 3;
             this.btnUpdate.Text = "Editar";
             this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click_1);
             // 
             // groupBox3
             // 
@@ -296,7 +305,7 @@
             this.dgCliente.Name = "dgCliente";
             this.dgCliente.Size = new System.Drawing.Size(525, 269);
             this.dgCliente.TabIndex = 0;
-            this.dgCliente.DoubleClick += new System.EventHandler(this.dgCliente_DoubleClick);
+            this.dgCliente.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCliente_CellDoubleClick);
             // 
             // groupBox4
             // 
@@ -316,10 +325,11 @@
             this.dgVehiculo.Name = "dgVehiculo";
             this.dgVehiculo.Size = new System.Drawing.Size(525, 269);
             this.dgVehiculo.TabIndex = 0;
-            this.dgVehiculo.DoubleClick += new System.EventHandler(this.dgVehiculo_DoubleClick);
+            this.dgVehiculo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgVehiculo_CellContentClick);
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.button1);
             this.groupBox5.Controls.Add(this.btnLimpiar);
             this.groupBox5.Controls.Add(this.btnMostrar);
             this.groupBox5.Controls.Add(this.btnUpdate);
@@ -330,32 +340,43 @@
             this.groupBox5.TabIndex = 6;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "groupBox5";
+            this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(401, 31);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(91, 50);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnLimpiar
             // 
             this.btnLimpiar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnLimpiar.IconColor = System.Drawing.Color.Black;
             this.btnLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnLimpiar.Location = new System.Drawing.Point(423, 37);
+            this.btnLimpiar.Location = new System.Drawing.Point(313, 31);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(119, 50);
+            this.btnLimpiar.Size = new System.Drawing.Size(82, 50);
             this.btnLimpiar.TabIndex = 3;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click_1);
             // 
             // btnMostrar
             // 
             this.btnMostrar.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnMostrar.IconColor = System.Drawing.Color.Black;
             this.btnMostrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMostrar.Location = new System.Drawing.Point(298, 37);
+            this.btnMostrar.Location = new System.Drawing.Point(225, 31);
             this.btnMostrar.Name = "btnMostrar";
-            this.btnMostrar.Size = new System.Drawing.Size(119, 50);
+            this.btnMostrar.Size = new System.Drawing.Size(82, 50);
             this.btnMostrar.TabIndex = 3;
             this.btnMostrar.Text = "Mostrar";
             this.btnMostrar.UseVisualStyleBackColor = true;
-            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
+            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click_1);
             // 
             // groupBox7
             // 
@@ -378,7 +399,6 @@
             this.btnSearchID.Size = new System.Drawing.Size(68, 34);
             this.btnSearchID.TabIndex = 5;
             this.btnSearchID.UseVisualStyleBackColor = true;
-            this.btnSearchID.Click += new System.EventHandler(this.btnSearchID_Click);
             // 
             // txtBuscarId
             // 
@@ -387,17 +407,11 @@
             this.txtBuscarId.Size = new System.Drawing.Size(326, 20);
             this.txtBuscarId.TabIndex = 4;
             // 
-            // txtTelefono
-            // 
-            this.txtTelefono.Location = new System.Drawing.Point(12, 372);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(247, 20);
-            this.txtTelefono.TabIndex = 1;
-            // 
             // AdminClienteVehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(1300, 711);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox5);
@@ -407,7 +421,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "AdminClienteVehiculo";
             this.Text = "AdminClienteVehiculo";
-            this.Load += new System.EventHandler(this.AdminClienteVehiculo_Load);
+            this.Load += new System.EventHandler(this.AdminClienteVehiculo_Load_1);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -456,6 +470,7 @@
         private System.Windows.Forms.GroupBox groupBox7;
         private FontAwesome.Sharp.IconButton btnSearchID;
         private System.Windows.Forms.TextBox txtBuscarId;
-        private System.Windows.Forms.TextBox txtTelefono;
+        private System.Windows.Forms.TextBox tbTelefono;
+        private System.Windows.Forms.Button button1;
     }
 }

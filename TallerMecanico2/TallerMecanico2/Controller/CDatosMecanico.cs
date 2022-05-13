@@ -14,11 +14,11 @@ namespace TallerMecanico2.Controller
 
     internal class CDatosMecanico
     {
-       Systa_taller2Entities1 db;
+       Systa_taller2Entities4 db;
 
         public void Insert(SYSTAS_MECANICO Mecanico)
         {
-            using (db = new Systa_taller2Entities1())
+            using (db = new Systa_taller2Entities4())
             {
                 try
                 {
@@ -27,7 +27,7 @@ namespace TallerMecanico2.Controller
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    
 
                 }
 
@@ -42,7 +42,7 @@ namespace TallerMecanico2.Controller
 
             try
             {
-                using (db = new Systa_taller2Entities1())
+                using (db = new Systa_taller2Entities4())
                 {
 
                     return db.SYSTAS_MECANICO.ToList();
@@ -50,7 +50,7 @@ namespace TallerMecanico2.Controller
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+               
                 return null;
             }
 
@@ -64,7 +64,7 @@ namespace TallerMecanico2.Controller
 
             try
             {
-                using (db = new Systa_taller2Entities1())
+                using (db = new Systa_taller2Entities4())
                 {
 
                     db.Entry(Mecanico).State = EntityState.Modified;
@@ -73,7 +73,7 @@ namespace TallerMecanico2.Controller
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+               
 
             }
 
@@ -84,7 +84,7 @@ namespace TallerMecanico2.Controller
 
             try
             {
-                using (db = new Systa_taller2Entities1())
+                using (db = new Systa_taller2Entities4())
                 {
                     db.SYSTAS_MECANICO.Remove(db.SYSTAS_MECANICO.Single(s => s.ID_Mecanico == sID));
                     db.SaveChanges();
@@ -93,7 +93,7 @@ namespace TallerMecanico2.Controller
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                
 
             }
 
@@ -104,7 +104,7 @@ namespace TallerMecanico2.Controller
         {
             try
             {
-                using (db = new Systa_taller2Entities1())
+                using (db = new Systa_taller2Entities4())
                 {
 
                     return db.SYSTAS_MECANICO.Where(s => s.ID_Mecanico == sID).ToList();
@@ -112,7 +112,7 @@ namespace TallerMecanico2.Controller
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+               
                 return null;
             }
 
@@ -122,7 +122,7 @@ namespace TallerMecanico2.Controller
         {
             try
             {
-                using (db = new Systa_taller2Entities1())
+                using (db = new Systa_taller2Entities4())
                 {
 
                     return db.SYSTAS_MECANICO.Where(s => s.nombre_mecanico.Contains(sName)).ToList();
@@ -130,7 +130,7 @@ namespace TallerMecanico2.Controller
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                
                 return null;
             }
 

@@ -17,7 +17,7 @@ namespace TallerMecanico2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AdminRPiezas());
+            Application.Run(new RegisterFactura());
         }
     }
 }

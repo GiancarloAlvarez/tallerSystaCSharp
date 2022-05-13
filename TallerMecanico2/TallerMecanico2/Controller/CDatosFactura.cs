@@ -10,25 +10,21 @@ using TallerMecanico2.Model;
 namespace TallerMecanico2.Controller
 {
     //Entity INFOTEP: Systa_taller1Entities
-    //Entity Casa: Systa_taller1Entities2
+    //Entity Casa: Systa_taller2Entities2
     internal class CDatosFactura
     {
-        Systa_taller2Entities1 db;
+        Systa_taller2Entities4 db;
 
         public void Insert(SYSTAS_FACTURA Factura)
         {
-            using (db = new Systa_taller2Entities1())
+            using (db = new Systa_taller2Entities4())
             {
-                try
-                {
+                
+                
                     db.SYSTAS_FACTURA.Add(Factura);
                     db.SaveChanges();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-
-                }
+                
+                
 
 
             }
@@ -39,81 +35,94 @@ namespace TallerMecanico2.Controller
         public List<SYSTAS_FACTURA> Read()
         {
 
-            try
-            {
-                using (db = new Systa_taller2Entities1())
+            
+            
+                using (db = new Systa_taller2Entities4())
                 {
 
                     return db.SYSTAS_FACTURA.ToList();
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                return null;
-            }
+            
+           
 
 
 
         }
 
+       /* public List<SYSTAS_FACTURA> Read2() {
+
+            using (db = new Systa_taller2Entities3())
+            {
+                int sID = 0;
+                 var consulta = (from factura in db.SYSTAS_FACTURA
+                                where factura.ID_Factura == sID
+                                select new
+                                {
+
+                                    factura.ID_Factura,
+                                    factura.Fecha_Factura,
+                                    factura.cantidad_usada,
+                                    factura.costo_servicio,
+                                    factura.servicio,
+                                    factura.subtotal_piezas,
+                                    factura.total,
+
+                                }).ToList();
+
+                return consulta.ToList;
+            }
+            
+
+
+        }
+       */
+       
+
 
         public void update(SYSTAS_FACTURA Factura)
         {
 
-            try
-            {
-                using (db = new Systa_taller2Entities1())
+            
+                using (db = new Systa_taller2Entities4())
                 {
 
                     db.Entry(Factura).State = EntityState.Modified;
                     db.SaveChanges();
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-
-            }
+            
+            
 
         }
 
         public void Delete(int sID)
         {
 
-            try
-            {
-                using (db = new Systa_taller2Entities1())
+            
+           
+                using (db = new Systa_taller2Entities4())
                 {
                     db.SYSTAS_FACTURA.Remove(db.SYSTAS_FACTURA.Single(s => s.ID_Factura == sID));
                     db.SaveChanges();
 
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-
-            }
+            
+           
 
 
         }
 
         public List<SYSTAS_FACTURA> Search(int sID)
         {
-            try
-            {
-                using (db = new Systa_taller2Entities1())
+            
+            
+                using (db = new Systa_taller2Entities4())
                 {
+                   
 
                     return db.SYSTAS_FACTURA.Where(s => s.ID_Factura == sID).ToList();
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                return null;
-            }
+            
+            
 
         }
 

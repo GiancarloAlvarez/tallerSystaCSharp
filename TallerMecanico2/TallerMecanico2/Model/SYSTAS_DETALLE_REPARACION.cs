@@ -22,7 +22,7 @@ namespace TallerMecanico2.Model
     
         public int ID_Detalle { get; set; }
         public string Estado_Vehiculo { get; set; }
-        public string Piezas_usadas { get; set; }
+        public string Pieza_usada { get; set; }
         public string mecanico_asignado { get; set; }
         public Nullable<double> mano_obra { get; set; }
         public Nullable<double> precio_piezas { get; set; }

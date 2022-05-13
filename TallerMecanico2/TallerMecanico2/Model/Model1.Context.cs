@@ -13,10 +13,10 @@ namespace TallerMecanico2.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Systa_taller1Entities : DbContext
+    public partial class Systa_taller2Entities3 : DbContext
     {
-        public Systa_taller1Entities()
-            : base("name=Systa_taller1Entities")
+        public Systa_taller2Entities3()
+            : base("name=Systa_taller2Entities3")
         {
         }
     

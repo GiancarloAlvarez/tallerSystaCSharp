@@ -45,6 +45,7 @@
             this.tBuscarId = new System.Windows.Forms.TextBox();
             this.txBuscar = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btnDelete = new FontAwesome.Sharp.IconButton();
             this.btnMostrar = new FontAwesome.Sharp.IconButton();
             this.btnLimpiar = new FontAwesome.Sharp.IconButton();
             this.btnUpdate = new FontAwesome.Sharp.IconButton();
@@ -223,15 +224,29 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.btnDelete);
             this.groupBox5.Controls.Add(this.btnMostrar);
             this.groupBox5.Controls.Add(this.btnLimpiar);
             this.groupBox5.Controls.Add(this.btnUpdate);
             this.groupBox5.Controls.Add(this.btnInsert);
             this.groupBox5.Location = new System.Drawing.Point(12, 513);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(587, 112);
+            this.groupBox5.Size = new System.Drawing.Size(782, 112);
             this.groupBox5.TabIndex = 8;
             this.groupBox5.TabStop = false;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnDelete.IconColor = System.Drawing.Color.Black;
+            this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDelete.Location = new System.Drawing.Point(572, 34);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(119, 50);
+            this.btnDelete.TabIndex = 3;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnMostrar
             // 
@@ -289,6 +304,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1187, 637);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox7);
@@ -333,5 +349,6 @@
         private FontAwesome.Sharp.IconButton btnUpdate;
         private FontAwesome.Sharp.IconButton btnInsert;
         private System.Windows.Forms.NumericUpDown nEstadoN;
+        private FontAwesome.Sharp.IconButton btnDelete;
     }
 }

@@ -105,11 +105,11 @@ namespace TallerMecanico2.View
 
         private void dgPiezas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            idInventario = (int)Convert.ToInt64(dgPiezas.CurrentRow.Cells["ID_Inventario"].Value.ToString());
-            txtPNombre.Text = dgPiezas.CurrentRow.Cells["nombre_pieza"].Value.ToString();
-            nTCantidad.Text =dgPiezas.CurrentRow.Cells["cantidad_pieza"].Value.ToString();
-            tbPrecio.Text = dgPiezas.CurrentRow.Cells["precio_pieza"].Value.ToString();
-            nEstadoN.Text = dgPiezas.CurrentRow.Cells["pieza_nueva"].Value.ToString();
+            idInventario = (int)Convert.ToInt64(dgPiezas.CurrentRow.Cells[0].Value.ToString());
+            txtPNombre.Text = dgPiezas.CurrentRow.Cells[1].Value.ToString();
+            nTCantidad.Text =dgPiezas.CurrentRow.Cells[2].Value.ToString();
+            tbPrecio.Text = dgPiezas.CurrentRow.Cells[3].Value.ToString();
+            nEstadoN.Text = dgPiezas.CurrentRow.Cells[4].Value.ToString();
         }
 
         private void iconButton5_Click(object sender, EventArgs e)
@@ -128,6 +128,15 @@ namespace TallerMecanico2.View
             CargarDatosPiezas();
 
             piezas.Insert(inventario_Piezas);
+
+            limpiarPiezas();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            CargarDatosPiezas();
+
+            piezas.Delete(inventario_Piezas.ID_inventario);
 
             limpiarPiezas();
         }

@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using TallerMecanico2.Controller;
 using TallerMecanico2.Model;
-
+using System.Linq;
 namespace TallerMecanico2.View
 {
     public partial class AdminClienteVehiculo : Form
@@ -38,8 +38,8 @@ namespace TallerMecanico2.View
             clientes.Apellido_Cliente = tbApellido.Text;
             clientes.cedula = tbCedula.Text;
             clientes.Direccion = tbDireccion.Text;
-           
-            clientes.telefono_Cliente = txtTelefono.Text;
+            
+            clientes.telefono_Cliente = tbTelefono.Text;
 
 
 
@@ -52,7 +52,7 @@ namespace TallerMecanico2.View
             clientesVehiculo.Modelo = tBModelo.Text;
             clientesVehiculo.Matricula = tBMatricula.Text;
             clientesVehiculo.Color = tBColor.Text;
-            clientesVehiculo.Cliente_id = idClienteVehiculo;
+
         }
 
         public void limpiar()
@@ -62,7 +62,7 @@ namespace TallerMecanico2.View
             tbApellido.Text = String.Empty;
             tbCedula.Text = String.Empty;
             tbDireccion.Text = String.Empty;
-            txtTelefono.Text = String.Empty;
+            tbTelefono.Text = String.Empty;
 
         }
         public void limpiarVehiculo()
@@ -106,12 +106,12 @@ namespace TallerMecanico2.View
 
         private void dgCliente_DoubleClick(object sender, EventArgs e)
         {
-            idClienteVehiculo = int.Parse(dgCliente.CurrentRow.Cells[0].Value.ToString());
+            idClienteVehiculo = (int)Convert.ToInt64(dgCliente.CurrentRow.Cells["ID_Cliente"].Value.ToString());
             tbNombre.Text = dgCliente.CurrentRow.Cells["Nombre_Cliente"].Value.ToString();
             tbApellido.Text = dgCliente.CurrentRow.Cells["Apellido_Cliente"].Value.ToString();
             tbCedula.Text = dgCliente.CurrentRow.Cells["cedula"].Value.ToString();
             tbDireccion.Text = dgCliente.CurrentRow.Cells["Direccion"].Value.ToString();
-            txtTelefono.Text = dgCliente.CurrentRow.Cells["telefono_cliente"].Value.ToString();
+            tbTelefono.Text = dgCliente.CurrentRow.Cells["telefono_cliente"].Value.ToString();
 
         }
 
@@ -126,11 +126,8 @@ namespace TallerMecanico2.View
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            CargarDatosClient();
-            CargarDatosVehiculo();
             cliente.update(clientes);
             clienteVehiculo.update(clientesVehiculo);
-           
             limpiar();
             limpiarVehiculo();
         }
@@ -147,6 +144,83 @@ namespace TallerMecanico2.View
         private void txtBuscarN_TextChanged(object sender, EventArgs e)
         {
           
+        }
+
+        private void btnGuardar_Click_1(object sender, EventArgs e)
+        {
+            CargarDatosClient();
+            CargarDatosVehiculo();
+            cliente.Insert(clientes);
+            clienteVehiculo.Insert(clientesVehiculo);
+            limpiar();
+            limpiarVehiculo();
+        }
+
+        private void btnUpdate_Click_1(object sender, EventArgs e)
+        {
+            CargarDatosClient();
+            CargarDatosVehiculo();
+            cliente.update(clientes);
+            clienteVehiculo.update(clientesVehiculo);
+            limpiar();
+            limpiarVehiculo();
+        }
+
+        private void btnMostrar_Click_1(object sender, EventArgs e)
+        {
+            CargarGridVehiculo();
+            CargarGridClient();
+        }
+
+        private void btnLimpiar_Click_1(object sender, EventArgs e)
+        {
+            limpiar();
+            limpiarVehiculo();
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox5_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AdminClienteVehiculo_Load_1(object sender, EventArgs e)
+        {
+            CargarGridVehiculo();
+            CargarGridClient();
+        }
+
+        private void dgCliente_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            idClienteVehiculo = (int)Convert.ToInt64(dgCliente.CurrentRow.Cells["ID_Cliente"].Value.ToString());
+            tbNombre.Text = dgCliente.CurrentRow.Cells["Nombre_Cliente"].Value.ToString();
+            tbApellido.Text = dgCliente.CurrentRow.Cells["Apellido_Cliente"].Value.ToString();
+            tbCedula.Text = dgCliente.CurrentRow.Cells["cedula"].Value.ToString();
+            tbDireccion.Text = dgCliente.CurrentRow.Cells["Direccion"].Value.ToString();
+            tbTelefono.Text = dgCliente.CurrentRow.Cells["telefono_cliente"].Value.ToString();
+        }
+
+        private void dgVehiculo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            idClienteVehiculo = (int)Convert.ToInt64(dgVehiculo.CurrentRow.Cells["ID_Vehiculo"].Value.ToString());
+            tBMarca.Text = dgVehiculo.CurrentRow.Cells["Marca"].Value.ToString();
+            tBModelo.Text = dgVehiculo.CurrentRow.Cells["Modelo"].Value.ToString();
+            tBMatricula.Text = dgVehiculo.CurrentRow.Cells["Matricula"].Value.ToString();
+            tBColor.Text = dgVehiculo.CurrentRow.Cells["Color"].Value.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CargarDatosClient();
+            CargarDatosVehiculo();
+            cliente.Delete(clientes.ID_Cliente);
+            clienteVehiculo.Delete(clientesVehiculo.ID_Vehiculo);
+            limpiar();
+            limpiarVehiculo();
         }
     }
 
