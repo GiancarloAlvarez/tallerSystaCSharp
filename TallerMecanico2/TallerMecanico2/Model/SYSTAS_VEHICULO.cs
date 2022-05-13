@@ -20,7 +20,6 @@ namespace TallerMecanico2.Model
         public string Modelo { get; set; }
         public string Color { get; set; }
         public Nullable<int> Cliente_id { get; set; }
-        public Nullable<int> FK_Cliente_id { get; set; }
     
         public virtual SYSTAS_CLIENTES SYSTAS_CLIENTES { get; set; }
     }

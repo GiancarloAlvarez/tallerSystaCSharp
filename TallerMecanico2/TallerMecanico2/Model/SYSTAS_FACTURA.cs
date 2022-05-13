@@ -19,18 +19,17 @@ namespace TallerMecanico2.Model
         public Nullable<int> Cliente_id { get; set; }
         public Nullable<int> mecanico_id { get; set; }
         public Nullable<int> servicio_id { get; set; }
+        public Nullable<int> taller_id { get; set; }
         public string repuestos_usados { get; set; }
         public Nullable<double> costo_servicio { get; set; }
         public Nullable<double> subtotal_piezas { get; set; }
         public Nullable<double> total { get; set; }
-        public Nullable<int> Servicio_id1 { get; set; }
-        public Nullable<int> mecanico_id1 { get; set; }
-        public Nullable<int> clientes_id1 { get; set; }
         public Nullable<int> detalle_id { get; set; }
     
         public virtual SYSTAS_CLIENTES SYSTAS_CLIENTES { get; set; }
         public virtual SYSTAS_DETALLE_REPARACION SYSTAS_DETALLE_REPARACION { get; set; }
         public virtual SYSTAS_MECANICO SYSTAS_MECANICO { get; set; }
         public virtual SYSTAS_SERVICIO SYSTAS_SERVICIO { get; set; }
+        public virtual SYSTAS_TALLER SYSTAS_TALLER { get; set; }
     }
 }

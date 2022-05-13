@@ -30,33 +30,33 @@ namespace TallerMecanico2.View
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnClienteG = new FontAwesome.Sharp.IconButton();
-            this.txtClienteD = new System.Windows.Forms.TextBox();
+            this.dispo = new System.Windows.Forms.NumericUpDown();
+            this.btnMecaG = new FontAwesome.Sharp.IconButton();
+            this.txtFecha = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtClienteC = new System.Windows.Forms.TextBox();
+            this.txtMecanicoC = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtClienteA = new System.Windows.Forms.TextBox();
+            this.txtMecanicoA = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtClienteN = new System.Windows.Forms.TextBox();
+            this.txtMecanicoN = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dispo)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.numericUpDown1);
-            this.groupBox1.Controls.Add(this.btnClienteG);
-            this.groupBox1.Controls.Add(this.txtClienteD);
+            this.groupBox1.Controls.Add(this.dispo);
+            this.groupBox1.Controls.Add(this.btnMecaG);
+            this.groupBox1.Controls.Add(this.txtFecha);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtClienteC);
+            this.groupBox1.Controls.Add(this.txtMecanicoC);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtClienteA);
+            this.groupBox1.Controls.Add(this.txtMecanicoA);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtClienteN);
+            this.groupBox1.Controls.Add(this.txtMecanicoN);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 21);
             this.groupBox1.Name = "groupBox1";
@@ -65,24 +65,31 @@ namespace TallerMecanico2.View
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cliente";
             // 
-            // btnClienteG
+            // dispo
             // 
-            this.btnClienteG.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnClienteG.IconColor = System.Drawing.Color.Black;
-            this.btnClienteG.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnClienteG.Location = new System.Drawing.Point(97, 439);
-            this.btnClienteG.Name = "btnClienteG";
-            this.btnClienteG.Size = new System.Drawing.Size(119, 50);
-            this.btnClienteG.TabIndex = 3;
-            this.btnClienteG.Text = "Guardar";
-            this.btnClienteG.UseVisualStyleBackColor = true;
+            this.dispo.Location = new System.Drawing.Point(13, 383);
+            this.dispo.Name = "dispo";
+            this.dispo.Size = new System.Drawing.Size(318, 20);
+            this.dispo.TabIndex = 4;
             // 
-            // txtClienteD
+            // btnMecaG
             // 
-            this.txtClienteD.Location = new System.Drawing.Point(13, 285);
-            this.txtClienteD.Name = "txtClienteD";
-            this.txtClienteD.Size = new System.Drawing.Size(318, 20);
-            this.txtClienteD.TabIndex = 1;
+            this.btnMecaG.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnMecaG.IconColor = System.Drawing.Color.Black;
+            this.btnMecaG.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMecaG.Location = new System.Drawing.Point(97, 439);
+            this.btnMecaG.Name = "btnMecaG";
+            this.btnMecaG.Size = new System.Drawing.Size(119, 50);
+            this.btnMecaG.TabIndex = 3;
+            this.btnMecaG.Text = "Guardar";
+            this.btnMecaG.UseVisualStyleBackColor = true;
+            // 
+            // txtFecha
+            // 
+            this.txtFecha.Location = new System.Drawing.Point(13, 285);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(318, 20);
+            this.txtFecha.TabIndex = 1;
             // 
             // label5
             // 
@@ -104,12 +111,12 @@ namespace TallerMecanico2.View
             this.label4.TabIndex = 0;
             this.label4.Text = "Fecha_nac";
             // 
-            // txtClienteC
+            // txtMecanicoC
             // 
-            this.txtClienteC.Location = new System.Drawing.Point(13, 221);
-            this.txtClienteC.Name = "txtClienteC";
-            this.txtClienteC.Size = new System.Drawing.Size(318, 20);
-            this.txtClienteC.TabIndex = 1;
+            this.txtMecanicoC.Location = new System.Drawing.Point(13, 221);
+            this.txtMecanicoC.Name = "txtMecanicoC";
+            this.txtMecanicoC.Size = new System.Drawing.Size(318, 20);
+            this.txtMecanicoC.TabIndex = 1;
             // 
             // label3
             // 
@@ -121,12 +128,12 @@ namespace TallerMecanico2.View
             this.label3.TabIndex = 0;
             this.label3.Text = "Cedula";
             // 
-            // txtClienteA
+            // txtMecanicoA
             // 
-            this.txtClienteA.Location = new System.Drawing.Point(13, 150);
-            this.txtClienteA.Name = "txtClienteA";
-            this.txtClienteA.Size = new System.Drawing.Size(318, 20);
-            this.txtClienteA.TabIndex = 1;
+            this.txtMecanicoA.Location = new System.Drawing.Point(13, 150);
+            this.txtMecanicoA.Name = "txtMecanicoA";
+            this.txtMecanicoA.Size = new System.Drawing.Size(318, 20);
+            this.txtMecanicoA.TabIndex = 1;
             // 
             // label2
             // 
@@ -138,12 +145,12 @@ namespace TallerMecanico2.View
             this.label2.TabIndex = 0;
             this.label2.Text = "Apellido";
             // 
-            // txtClienteN
+            // txtMecanicoN
             // 
-            this.txtClienteN.Location = new System.Drawing.Point(13, 83);
-            this.txtClienteN.Name = "txtClienteN";
-            this.txtClienteN.Size = new System.Drawing.Size(318, 20);
-            this.txtClienteN.TabIndex = 1;
+            this.txtMecanicoN.Location = new System.Drawing.Point(13, 83);
+            this.txtMecanicoN.Name = "txtMecanicoN";
+            this.txtMecanicoN.Size = new System.Drawing.Size(318, 20);
+            this.txtMecanicoN.TabIndex = 1;
             // 
             // label1
             // 
@@ -155,24 +162,17 @@ namespace TallerMecanico2.View
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre";
             // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(13, 383);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(318, 20);
-            this.numericUpDown1.TabIndex = 4;
-            // 
             // registerMecanico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(655, 666);
+            this.ClientSize = new System.Drawing.Size(429, 666);
             this.Controls.Add(this.groupBox1);
             this.Name = "registerMecanico";
             this.Text = "registerMecanico";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dispo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -180,16 +180,16 @@ namespace TallerMecanico2.View
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private FontAwesome.Sharp.IconButton btnClienteG;
-        private System.Windows.Forms.TextBox txtClienteD;
+        private System.Windows.Forms.NumericUpDown dispo;
+        private FontAwesome.Sharp.IconButton btnMecaG;
+        private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtClienteC;
+        private System.Windows.Forms.TextBox txtMecanicoC;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtClienteA;
+        private System.Windows.Forms.TextBox txtMecanicoA;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtClienteN;
+        private System.Windows.Forms.TextBox txtMecanicoN;
         private System.Windows.Forms.Label label1;
     }
 }

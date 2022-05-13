@@ -14,11 +14,11 @@ namespace TallerMecanico2.Controller
 
     internal class CDatosMecanico
     {
-        Model.Systa_taller2Entities db;
+       Systa_taller2Entities1 db;
 
         public void Insert(SYSTAS_MECANICO Mecanico)
         {
-            using (db = new Systa_taller2Entities())
+            using (db = new Systa_taller2Entities1())
             {
                 try
                 {
@@ -42,7 +42,7 @@ namespace TallerMecanico2.Controller
 
             try
             {
-                using (db = new Systa_taller2Entities())
+                using (db = new Systa_taller2Entities1())
                 {
 
                     return db.SYSTAS_MECANICO.ToList();
@@ -64,7 +64,7 @@ namespace TallerMecanico2.Controller
 
             try
             {
-                using (db = new Systa_taller2Entities())
+                using (db = new Systa_taller2Entities1())
                 {
 
                     db.Entry(Mecanico).State = EntityState.Modified;
@@ -84,7 +84,7 @@ namespace TallerMecanico2.Controller
 
             try
             {
-                using (db = new Systa_taller2Entities())
+                using (db = new Systa_taller2Entities1())
                 {
                     db.SYSTAS_MECANICO.Remove(db.SYSTAS_MECANICO.Single(s => s.ID_Mecanico == sID));
                     db.SaveChanges();
@@ -104,7 +104,7 @@ namespace TallerMecanico2.Controller
         {
             try
             {
-                using (db = new Systa_taller2Entities())
+                using (db = new Systa_taller2Entities1())
                 {
 
                     return db.SYSTAS_MECANICO.Where(s => s.ID_Mecanico == sID).ToList();
@@ -122,7 +122,7 @@ namespace TallerMecanico2.Controller
         {
             try
             {
-                using (db = new Systa_taller2Entities())
+                using (db = new Systa_taller2Entities1())
                 {
 
                     return db.SYSTAS_MECANICO.Where(s => s.nombre_mecanico.Contains(sName)).ToList();
